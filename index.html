@@ -8,29 +8,37 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{font-size:16px;-webkit-text-size-adjust:100%}
+html{font-size:106.25%;-webkit-text-size-adjust:100%;quotes:"“" "”"}
+html:lang(cs),html:lang(de){quotes:"„" "“"}
 body{
-  font-family:'Manrope',-apple-system,BlinkMacSystemFont,sans-serif;
-  font-weight:400;color:#1C2333;background-color:#EEF2F7;
-  background-image:
-    radial-gradient(ellipse 90% 60% at 15% -5%,rgba(99,102,241,.10) 0%,transparent 55%),
-    radial-gradient(ellipse 70% 50% at 85% 105%,rgba(20,184,166,.09) 0%,transparent 55%),
-    radial-gradient(circle at 1px 1px,rgba(148,163,184,.35) 1px,transparent 0);
-  background-size:100% 100%,100% 100%,26px 26px;
-  min-height:100vh;padding:48px 16px 64px
+  position:relative;
+  min-width:320px;
+  min-height:100vh;
+  padding:48px 16px 64px;
+  font-size:17px;
+  line-height:1.4705882353;
+  font-weight:400;
+  letter-spacing:-0.022em;
+  font-family:"SF Pro Text","SF Pro Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
+  -moz-font-feature-settings:"kern";
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  background-color:rgb(255,255,255);
+  color:rgb(29,29,31);
+  font-style:normal
 }
 :root{
-  --ind:#6366F1;--ind-d:#4F46E5;--ind-s:rgba(99,102,241,.10);
-  --teal:#14B8A6;--teal-s:rgba(20,184,166,.10);
-  --vio-s:rgba(124,58,237,.09);--amb-s:rgba(217,119,6,.09);
-  --s5:#64748B;--s6:#475569;--s7:#334155;--s9:#0F172A;
-  --glass:rgba(255,255,255,.62);--gb:rgba(255,255,255,.88);
+  --ind:rgb(0,113,227);--ind-d:rgb(0,102,204);--ind-s:rgba(0,113,227,.10);
+  --teal:rgb(3,161,14);--teal-s:rgba(3,161,14,.10);
+  --vio-s:rgba(0,0,0,.06);--amb-s:rgba(245,99,0,.10);
+  --s5:rgb(134,134,139);--s6:rgb(110,110,115);--s7:rgb(66,66,69);--s9:rgb(29,29,31);
+  --glass:rgba(232,232,237,.72);--gb:rgba(255,255,255,.8);
   --r-xl:24px;--r-lg:18px;--r-md:12px;--r-sm:8px;
-  --sh-c:0 2px 16px rgba(15,23,42,.07),0 1px 4px rgba(15,23,42,.04);
-  --sh-lg:0 8px 32px rgba(15,23,42,.10),0 2px 8px rgba(15,23,42,.06)
+  --sh-c:0 2px 16px rgba(0,0,0,.08),0 1px 4px rgba(0,0,0,.04);
+  --sh-lg:0 8px 32px rgba(0,0,0,.08),0 2px 8px rgba(0,0,0,.06)
 }
 .wrap{max-width:960px;margin:0 auto}
-.glass{background:var(--glass);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid var(--gb);border-radius:var(--r-xl);box-shadow:var(--sh-lg)}
+.glass{background:var(--glass);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);border:1px solid var(--gb);border-radius:var(--r-xl);box-shadow:var(--sh-lg)}
 .section{margin-bottom:18px}
 @keyframes rise{from{opacity:0;transform:translateY(30px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
 .rise{animation:rise .72s cubic-bezier(.22,.68,0,1.05) both}
@@ -199,15 +207,15 @@ body{
     <div class="n1">Павел</div>
     <div class="n2">Сайганов</div>
     <div class="glow"></div>
-    <p class="tl-role">AI &amp; Продуктовый Маркетинг · Кросс-культурное Бизнес-развитие<br><em>Европа · Африка · Латинская Америка</em></p>
+    <p class="tl-role">AI &amp; Продуктовый Маркетинг · Кросс-культурное развитие бизнеса<br><em>Европа · Африка · Латинская Америка</em></p>
     <p class="tl-q">"Be the change you want to see in the world."</p>
   </div>
   <div class="cc">
     <div class="sb"><span class="pd"></span>Открыт к C-Level позициям</div>
     <div class="cl">
-      <a href="mailto:p.sayganov@gmail.com" class="ci">
+      <a href="mailto:pavel.sayganov@vk.com" class="ci">
         <svg class="ico" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        p.sayganov@gmail.com
+        pavel.sayganov@vk.com
       </a>
       <a href="https://t.me/paveletty" class="ci">
         <svg class="ico" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.48 14.26l-2.95-.924c-.642-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.326.326z"/></svg>
@@ -215,7 +223,7 @@ body{
       </a>
       <span class="ci">
         <svg class="ico" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-        Удалённо · Глобально
+        Удалённо
       </span>
     </div>
   </div>
@@ -225,34 +233,34 @@ body{
 <section class="glass section rise d1">
 <div class="vp">
   <div class="vp-t">
-    <span class="lbl" style="margin-bottom:20px">01 · Ценностное предложение</span>
-    <p>Эксперт по международным коммуникациям и маркетингу с <strong>12+ годами опыта</strong> на рынках Латинской Америки, Африки и России (Software, Mining, Глобальные мероприятия).</p>
-    <p>Специализируюсь на трансформации сложных продуктов в понятные медиа-нарративы и адаптации <span class="ai">UVP цифровых продуктов</span> под культурный код локального рынка.</p>
-    <p>Опыт переговоров уровня C-Level и госструктур. Координировал 5+ департаментов сборной Португалии на ЧМ-2018 — «единое окно» для FIFA и городских властей.</p>
+    <span class="lbl" style="margin-bottom:20px">01 · Кто я</span>
+    <p>Эксперт по международному развитию бизнеса и маркетингу с <strong>12+ годами опыта</strong> на рынках Латинской Америки, Африки и России (програмное обеспечение, добыча и обогащение полезных ископаемых, спорт, международные отношения).</p>
+    <p>Специализируюсь на разработке стратегий развития бизнеса на международных рынках, управлении рисками при работе с иностранными контрагентами и GR-сопровождении.</p>
+    <p>Организовывал мероприятия международного уровня (Форум «Россия–Африка», Чемпионат мира по футболу Россия-2018).</p>
     <p>Свободно: <span class="at">португальский (C2), английский (C2), испанский (B2)</span>, русский (родной).</p>
   </div>
   <div class="vp-tags">
-    <div class="vp-tag ti">🤖 AI-First стратегия</div>
-    <div class="vp-tag tt">🌍 Глобальные команды</div>
-    <div class="vp-tag tv">🚀 Продуктовый сторителлинг</div>
-    <div class="vp-tag ta">📈 Операц. эффективность</div>
+    <div class="vp-tag ti">🌍 Эксперт по международным рынкам (Ангола, Бразилия, Португалия)</div>
+    <div class="vp-tag tt">🤝 b2b / g2b</div>
+    <div class="vp-tag tv">📊 Управление рисками</div>
+    <div class="vp-tag ta">🚀 Стратегия развития бизнеса</div>
   </div>
 </div>
 </section>
 
 <section class="glass section rise d2">
 <div class="dw">
-  <span class="lbl" style="margin-bottom:20px">02 · Дашборд достижений</span>
+  <span class="lbl" style="margin-bottom:20px">02 · Что я умею</span>
   <div class="mg">
-    <div class="mc"><div class="me">Скорость контента</div><div class="mn"><span class="ci2">+40</span><span>%</span></div><div class="mb bi"></div><div class="md">Ускорение производства SEO-материалов через AI-инструменты</div><div class="ms i">↑ Production Velocity</div></div>
-    <div class="mc"><div class="me">Точность</div><div class="mn"><span class="ct2">100</span><span>%</span></div><div class="mb bt"></div><div class="md">Редактура технической и юридической документации без ошибок</div><div class="ms t">✓ Гарантия качества</div></div>
-    <div class="mc"><div class="me">Скорость задач</div><div class="mn"><span class="ci2">−30</span><span>%</span></div><div class="mb bi"></div><div class="md">Сокращение сроков через централизованную систему трекинга</div><div class="ms i">↑ Операц. эффективность</div></div>
-    <div class="mc"><div class="me">Ресурсы (ЧМ-2018)</div><div class="mn"><span class="ct2">−20</span><span>%</span></div><div class="mb bt"></div><div class="md">Оптимизация расходов при 100% точности в Live-режиме</div><div class="ms t">✓ Кризисный менеджмент</div></div>
+    <div class="mc"><div class="me">Эффективность работы</div><div class="mn"><span class="ci2">+40</span><span class="ci2">%</span></div><div class="mb bi"></div><div class="md">Ускорение операционной деятельности через AI-инструменты</div><div class="ms i">Скорость выполнения</div></div>
+    <div class="mc"><div class="me">Точность</div><div class="mn"><span class="ct2">100</span><span class="ct2">%</span></div><div class="mb bt"></div><div class="md">Редактура технической и юридической документации без ошибок</div><div class="ms t">✓ Гарантия качества</div></div>
+    <div class="mc"><div class="me">Затраты ресурсов</div><div class="mn"><span class="ci2">−30</span><span class="ci2">%</span></div><div class="mb bi"></div><div class="md">Оптимизация бизнес-процессов и повышение качества</div><div class="ms i">↓ Сокращение издержек</div></div>
+    <div class="mc"><div class="me">Мероприятия · Top Tier</div><div class="mn"><span class="ct2">Top</span><span class="ct2"> Tier</span></div><div class="mb bt"></div><div class="md">Организация форумов и конференций</div><div class="ms t">✓ Кризисный менеджмент</div></div>
   </div>
   <div class="sm">
     <div class="smc"><div class="smn cii">200+</div><div class="sml">Переговоров высокого уровня</div></div>
-    <div class="smc"><div class="smn ctt">4</div><div class="sml">Языка на уровне C2/Native</div></div>
-    <div class="smc"><div class="smn cvv">3</div><div class="sml">Континента · 13+ лет опыта</div></div>
+    <div class="smc"><div class="smn ctt">3</div><div class="sml">языка на уровне C2/Native</div></div>
+    <div class="smc"><div class="smn cvv">13+</div><div class="sml">лет международного опыта</div></div>
   </div>
 </div>
 </section>
@@ -264,20 +272,20 @@ body{
   <div class="ec">
     <div class="eh">
       <div>
-        <div><span class="eb bc">Текущее место</span><span class="ectx">Рост &amp; AI-трансформация</span></div>
-        <div class="et">Специалист по маркетингу (Бразилия)</div>
+        <div><span class="eb bc">Текущее место</span><span class="ectx">Развитие бизнеса</span></div>
+        <div class="et">Региональный менеджер по стратегии и коммуникациям (Бразилия)</div>
         <div class="eco ei">1С-Битрикс24</div>
       </div>
       <div class="ed"><div class="ed1">Январь 2025 — н.в.</div><div class="ed2">1 год 3 мес.</div></div>
     </div>
     <div class="ebl">
-      <div class="ebul"><span class="arr ai2">→</span><span><strong>BizDev:</strong> разработка стратегии развития продукта на рынке Бразилии. Адаптация ценностного предложения под локальный культурный код.</span></div>
-      <div class="ebul"><span class="arr at2">→</span><span><strong>AI-First подход:</strong> внедрил нейросети в рутину (SEO, SMM, Visual). Сократил время производства контента на 50% без потери качества.</span></div>
-      <div class="ebul"><span class="arr av2">→</span><span><strong>Аналитика и отчётность:</strong> система мониторинга на базе AI для контроля ROI. Коррекция планов на основе данных, а не интуиции.</span></div>
+      <div class="ebul"><span class="arr ai2">→</span><span><strong>Стратегия развития:</strong> участие в разработке стратегии развития продукта на рынке Бразилии. Понимание циклов разработки и продажи цифровых сервисов.</span></div>
+      <div class="ebul"><span class="arr at2">→</span><span><strong>Аналитика и мониторинг:</strong> внедрение AI-инструментов для операционной деятельности и мониторинга достижения целей бизнеса</span></div>
+      <div class="ebul"><span class="arr av2">→</span><span><strong>Отчётность и презентации:</strong> подготовка регулярных отчетов, презентаций и предложений</span></div>
       <div class="ebul"><span class="arr aa2">→</span><span><strong>Продукт:</strong> анализ жизненного цикла и конкурентной среды для корректировки планов продаж и рыночной стратегии.</span></div>
     </div>
     <div class="etags">
-      <span class="badge bdi">AI Agents</span><span class="badge bdt">Growth Marketing</span><span class="badge bdi">Рыночная стратегия</span><span class="badge bdv">Media Relations</span><span class="badge bda">Аналитика данных</span>
+      <span class="badge bdi">Технологические продукты</span><span class="badge bdt">Рыночная стратегия</span><span class="badge bdi">Аналитика</span><span class="badge bdv">Отчётность</span>
     </div>
   </div>
 
@@ -291,10 +299,10 @@ body{
       <div class="ed"><div class="ed1">Авг. 2019 — Янв. 2025</div><div class="ed2">5 лет 5 мес.</div></div>
     </div>
     <div class="ebl">
-      <div class="ebul"><span class="arr aa2">→</span><span><strong>Работа с контрагентами:</strong> контроль и мониторинг деятельности партнёров. Управление рисками при взаимодействии с внешними поставщиками.</span></div>
-      <div class="ebul"><span class="arr at2">→</span><span><strong>GR и госорганы:</strong> запросы в министерства и нац. компании Анголы. Организация переговоров G2B высокого уровня — 200+ встреч.</span></div>
-      <div class="ebul"><span class="arr ai2">→</span><span><strong>Аналитика и планирование:</strong> Market Intelligence отчёты для C-Level. Анализ социально-экономического положения региона для корректировки стратегии.</span></div>
-      <div class="ebul"><span class="arr av2">→</span><span><strong>Оптимизация процессов:</strong> централизованная система трекинга — сроки исполнения поручений сократились на 30%.</span></div>
+      <div class="ebul"><span class="arr aa2">→</span><span><strong>Контроль контрагентов:</strong> обеспечение контроля, мониторинга и управления рисками в работе с контрагентами курируемых направлений.</span></div>
+      <div class="ebul"><span class="arr at2">→</span><span><strong>Участие в переговорах высшего уровня:</strong> государство, акционеры, международные организации</span></div>
+      <div class="ebul"><span class="arr ai2">→</span><span><strong>Аналитика и планирование:</strong> подготовка аналитических отчётов. Анализ социально-экономического положения региона.</span></div>
+      <div class="ebul"><span class="arr av2">→</span><span><strong>Контроль качества:</strong> повышение качества предоставляемых сервисов (документооборот, переводы, логистика) через оптимизацию внутренних процессов.</span></div>
     </div>
     <div class="etags">
       <span class="badge bdt">Executive Comms</span><span class="badge bda">Risk Control</span><span class="badge bdi">GR &amp; Дипломатия</span><span class="badge bdv">Strategic Analysis</span><span class="badge bdt">Operational Mgmt</span>
@@ -311,12 +319,12 @@ body{
       <div class="ed"><div class="ed1">Окт. 2012 — н.в.</div><div class="ed2">13 лет 6 мес.</div></div>
     </div>
     <div class="ebl">
-      <div class="ebul"><span class="arr av2">→</span><span><strong>ЧМ-2018 · Сборная Португалии:</strong> руководство операционным сопровождением. Координация 5 департаментов (логистика, безопасность, медиа). «Единое окно» для FIFA и городских властей. Лично знаком с Криштиану Роналду.</span></div>
-      <div class="ebul"><span class="arr at2">→</span><span><strong>Форум «Россия–Африка» и госмероприятия:</strong> подготовка и проведение форумов, конференций, официальных визитов. Взаимодействие с российскими и зарубежными госорганами.</span></div>
+      <div class="ebul"><span class="arr av2">→</span><span><strong>Чемпионат мира по футбоул Россия-2018 · Сборная Португалии:</strong> операционное сопровождение, координация, решение нестандартных задач. Оптимизация бюджета на 20%.</span></div>
+      <div class="ebul"><span class="arr at2">→</span><span><strong>Организация мероприятий:</strong> подготовка и проведение форумов, выставок, конференций. Работа с российскими и зарубежными государственными органами.</span></div>
       <div class="ebul"><span class="arr ai2">→</span><span><strong>Встречи «под ключ»:</strong> логистика, протокол, программа для партнёров из Африки и Латинской Америки.</span></div>
     </div>
     <div class="etags">
-      <span class="badge bdv">Crisis Management</span><span class="badge bdt">Синхронный перевод</span><span class="badge bdi">Диплом. протокол</span><span class="badge bda">Организация событий</span>
+      <span class="badge bdv">Коммуникация со СМИ</span><span class="badge bdt">Синхронный перевод</span><span class="badge bdi">Протокол</span><span class="badge bda">Организация мероприятий</span>
     </div>
   </div>
 </div>
@@ -325,19 +333,19 @@ body{
 <div class="sr rise d4">
   <section class="glass">
   <div class="sw">
-    <span class="lbl" style="margin-bottom:22px">04 · Стек и языки</span>
+    <span class="lbl" style="margin-bottom:22px">04 · НАВЫКИ И ЯЗЫКИ</span>
     <div class="sg"><span class="sgl">Языки и коммуникации</span><div class="bdg"><span class="badge bdi">Английский C2</span><span class="badge bdi">Португальский C2</span><span class="badge bdi">Испанский B2</span><span class="badge bdi">Русский (родной)</span></div></div>
     <div class="sg"><span class="sgl">Экспертные навыки</span><div class="bdg"><span class="badge bdt">Синхронный перевод</span><span class="badge bdt">Визиты высокого уровня</span><span class="badge bdt">Дипломатический протокол</span><span class="badge bdt">Business Intelligence</span></div></div>
-    <div class="sg"><span class="sgl">Стратегические инструменты</span><div class="bdg"><span class="badge bdv">Generative AI</span><span class="badge bdv">Process Automation</span><span class="badge bdv">Кросс-культурный этикет</span><span class="badge bdv">Конфиденциальность</span></div></div>
+    <div class="sg"><span class="sgl">Стратегические инструменты</span><div class="bdg"><span class="badge bdv">ИИ-ассистированная разработка</span><span class="badge bdv">Автоматизация</span><span class="badge bdv">Кросс-культурный этикет</span><span class="badge bdv">Конфиденциальность</span></div></div>
   </div>
   </section>
   <section class="glass">
   <div class="mw">
     <span class="lbl" style="margin-bottom:22px">05 · Мета-навыки</span>
-    <div class="msk mi"><div class="mt">Финансовая грамотность (ROI)</div><div class="mdc">Понимание P&amp;L и бизнес-метрик (курс CFO). Работа ради прибыли, а не ради процесса.</div><div class="mbar"><div class="mfill" style="width:88%"></div></div></div>
-    <div class="msk mtt"><div class="mt">Кросс-культурная адаптация</div><div class="mdc">Опыт на трёх континентах (Европа, Латам, Африка). Умение находить подход к любой аудитории.</div><div class="mbar"><div class="mfill" style="width:96%"></div></div></div>
-    <div class="msk mv"><div class="mt">Стратегическое партнёрство</div><div class="mdc">Выстраивание диалога с C-Level и госструктурами. Перевод технических смыслов на язык бизнеса.</div><div class="mbar"><div class="mfill" style="width:93%"></div></div></div>
-    <div class="msk ma"><div class="mt">Работа с первыми лицами</div><div class="mdc">VIP-делегации на крупнейших мероприятиях. Лично знаком с Криштиану Роналду.</div><div class="mbar"><div class="mfill" style="width:98%"></div></div></div>
+    <div class="msk mi"><div class="mt">Финансовая грамотность (ROI)</div><div class="mdc">Понимание бизнес-метрик. Работа ради прибыли, а не ради процесса</div><div class="mbar"><div class="mfill" style="width:88%"></div></div></div>
+        <div class="msk mi"><div class="mt">Стратегическое партнёрство</div><div class="mdc">Выстраивание диалога с C-Level и госструктурами. Перевод технических смыслов на язык бизнеса.</div><div class="mbar"><div class="mfill" style="width:93%"></div></div></div>
+    <div class="msk mi"><div class="mt">Работа с первыми лицами</div><div class="mdc">VIP-делегации на крупнейших мероприятиях. Лично знаком с Криштиану Роналду.</div><div class="mbar"><div class="mfill" style="width:98%"></div></div></div>
+    <div class="msk mi"><div class="mt">Понимание специфики Африки</div><div class="mdc">Глубокое знание бизнес-среды Анголы (право, налоги, менталитет).</div><div class="mbar"><div class="mfill" style="width:94%"></div></div></div>
   </div>
   </section>
 </div>
@@ -346,8 +354,8 @@ body{
 <div class="eduw">
   <span class="lbl" style="margin-bottom:24px">06 · Образование и сертификации</span>
   <div class="edu-grid">
-    <div class="edc ec1"><div class="ey eyi">2026</div><div class="eicon">🎓</div><div class="etit">Финансовый директор (CFO)</div><div class="esub">Eduson Academy · Executive Education</div><div class="estat es-i">В процессе →</div></div>
-    <div class="edc ec2"><div class="ey eyt">2014</div><div class="eicon">🎓</div><div class="etit">Лингвистика и переводоведение</div><div class="esub">Теория языка и стилистика · Диплом специалиста</div><div class="estat es-t">✓ Окончено</div></div>
+    <div class="edc ec1"><div class="ey eyi">2023–2025</div><div class="eicon">🎓</div><div class="etit">Директор по экономике и финансам (CFO)</div><div class="esub">Eduson Academy · Профессиональная переподготовка</div><div class="estat es-i">✓ Завершено</div></div>
+    <div class="edc ec2"><div class="ey eyt">2014</div><div class="eicon">🎓</div><div class="etit">Московский государственный лингвистический университет</div><div class="esub">Теория языка и стилистика · Диплом специалиста</div><div class="estat es-t">✓ Завершено</div></div>
     <div class="edc ec3"><div class="ey eyv">2013–2014</div><div class="eicon">🌐</div><div class="etit">Международные коммуникации</div><div class="esub">Universidade do Minho, Португалия</div><div class="estat es-v">✓ Завершено</div></div>
   </div>
 </div>
@@ -356,7 +364,7 @@ body{
 <footer class="ft rise d6">
   <div class="fl"></div>
   <p class="fn">Павел Сайганов · 2026</p>
-  <p class="fs">AI &amp; Продуктовый Маркетинг · Кросс-культурное Бизнес-развитие · Европа · Африка · Латинская Америка</p>
+  <p class="fs">Международное развитие бизнеса · Управление проектами · Ангола · Бразилия · Португалия</p>
 </footer>
 
 </div>
