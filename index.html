@@ -3,359 +3,362 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pavel Sayganov — CV 2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>Павел Сайганов — CV 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --indigo: #6366F1;
-    --teal: #14B8A6;
-    --navy: #0A0F1E;
-    --glass-bg: rgba(255,255,255,0.65);
-    --glass-border: rgba(255,255,255,0.85);
-  }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Manrope',-apple-system,BlinkMacSystemFont,sans-serif;
+  font-weight:400;color:#1C2333;background-color:#EEF2F7;
+  background-image:
+    radial-gradient(ellipse 90% 60% at 15% -5%,rgba(99,102,241,.10) 0%,transparent 55%),
+    radial-gradient(ellipse 70% 50% at 85% 105%,rgba(20,184,166,.09) 0%,transparent 55%),
+    radial-gradient(circle at 1px 1px,rgba(148,163,184,.35) 1px,transparent 0);
+  background-size:100% 100%,100% 100%,26px 26px;
+  min-height:100vh;padding:48px 16px 64px
+}
+:root{
+  --ind:#6366F1;--ind-d:#4F46E5;--ind-s:rgba(99,102,241,.10);
+  --teal:#14B8A6;--teal-s:rgba(20,184,166,.10);
+  --vio-s:rgba(124,58,237,.09);--amb-s:rgba(217,119,6,.09);
+  --s5:#64748B;--s6:#475569;--s7:#334155;--s9:#0F172A;
+  --glass:rgba(255,255,255,.62);--gb:rgba(255,255,255,.88);
+  --r-xl:24px;--r-lg:18px;--r-md:12px;--r-sm:8px;
+  --sh-c:0 2px 16px rgba(15,23,42,.07),0 1px 4px rgba(15,23,42,.04);
+  --sh-lg:0 8px 32px rgba(15,23,42,.10),0 2px 8px rgba(15,23,42,.06)
+}
+.wrap{max-width:960px;margin:0 auto}
+.glass{background:var(--glass);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid var(--gb);border-radius:var(--r-xl);box-shadow:var(--sh-lg)}
+.section{margin-bottom:18px}
+@keyframes rise{from{opacity:0;transform:translateY(30px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+.rise{animation:rise .72s cubic-bezier(.22,.68,0,1.05) both}
+.d1{animation-delay:.07s}.d2{animation-delay:.15s}.d3{animation-delay:.23s}
+.d4{animation-delay:.31s}.d5{animation-delay:.39s}.d6{animation-delay:.47s}
+@keyframes pulse{50%{opacity:.4}}
 
-  * { font-family: 'DM Sans', sans-serif; }
-  .serif { font-family: 'Instrument Serif', Georgia, serif; }
-  .syne { font-family: 'Syne', sans-serif; }
+/* ── HEADER ── */
+.hdr{padding:48px 52px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start}
+.n1{font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-.04em;line-height:.92;font-size:clamp(52px,8vw,80px);color:var(--s9)}
+.n2{font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-.04em;line-height:.92;font-size:clamp(52px,8vw,80px);background:linear-gradient(100deg,#6366F1,#14B8A6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.glow{width:72px;height:2px;border-radius:2px;background:linear-gradient(90deg,#6366F1,#14B8A6,transparent);margin:20px 0}
+.tl-role{font-size:14px;font-weight:600;color:var(--s6);line-height:1.5;max-width:320px}
+.tl-role em{color:var(--ind);font-style:normal;font-weight:700}
+.tl-q{margin-top:14px;font-family:'Instrument Serif',serif;font-style:italic;font-size:13px;color:#94A3B8;max-width:300px}
+.cc{display:flex;flex-direction:column;gap:10px;align-items:flex-end;padding-top:6px}
+.sb{display:inline-flex;align-items:center;gap:7px;background:#F0FDF4;border:1px solid #BBF7D0;color:#166534;font-size:11px;font-weight:700;padding:6px 13px;border-radius:100px;white-space:nowrap}
+.pd{width:7px;height:7px;border-radius:50%;background:#34D399;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}
+.cl{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.ci{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--s6);text-decoration:none;transition:color .2s}
+.ci:hover{color:var(--ind)}
+.ico{width:15px;height:15px;color:#A5B4FC;flex-shrink:0}
+.lbl{font-size:10px;font-weight:600;letter-spacing:.20em;text-transform:uppercase;color:#94A3B8;display:block}
 
-  /* ── Background ── */
-  body {
-    background: #F0F4F8;
-    background-image:
-      radial-gradient(ellipse 80% 50% at 20% -10%, rgba(99,102,241,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 40% at 80% 110%, rgba(20,184,166,0.07) 0%, transparent 60%),
-      radial-gradient(circle, #C8D6E5 1px, transparent 1px);
-    background-size: 100% 100%, 100% 100%, 28px 28px;
-  }
+/* ── VALUE PROP ── */
+.vp{display:grid;grid-template-columns:1fr 210px;gap:36px;padding:40px 48px}
+.vp-t p{font-size:14.5px;color:var(--s6);line-height:1.75;margin-bottom:12px}
+.vp-t p:last-child{margin-bottom:0}
+.vp-t strong{color:var(--s7);font-weight:700}
+.ai{color:var(--ind);font-weight:700}.at{color:#0D9488;font-weight:700}
+.vp-tags{display:flex;flex-direction:column;gap:8px;padding-top:28px}
+.vp-tag{display:flex;align-items:center;gap:8px;padding:9px 13px;border-radius:var(--r-md);font-size:12.5px;font-weight:600;transition:transform .2s ease;cursor:default}
+.vp-tag:hover{transform:translateX(3px)}
+.ti{background:var(--ind-s);color:var(--ind-d);border:1px solid rgba(99,102,241,.16)}
+.tt{background:var(--teal-s);color:#0F766E;border:1px solid rgba(20,184,166,.16)}
+.tv{background:var(--vio-s);color:#6D28D9;border:1px solid rgba(124,58,237,.16)}
+.ta{background:var(--amb-s);color:#B45309;border:1px solid rgba(217,119,6,.16)}
 
-  /* ── Glass cards ── */
-  .glass {
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-    box-shadow: 0 4px 24px rgba(15,23,42,0.06), 0 1px 4px rgba(15,23,42,0.04);
-  }
+/* ── DASHBOARD ── */
+.dw{padding:36px 44px}
+.mg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:12px}
+.mc{background:linear-gradient(150deg,#090E1C,#111827,#0D1829);border:1px solid rgba(255,255,255,.055);border-radius:var(--r-lg);padding:22px 20px 20px;position:relative;overflow:hidden;transition:transform .38s cubic-bezier(.22,.68,0,1.2),box-shadow .38s ease;cursor:default}
+.mc::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 0%,rgba(99,102,241,.20),transparent 65%);opacity:0;transition:opacity .38s ease}
+.mc:hover::after{opacity:1}
+.mc:hover{transform:translateY(-6px) scale(1.015);box-shadow:0 28px 52px rgba(99,102,241,.24),0 8px 20px rgba(0,0,0,.18)}
+.me{font-size:9.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#64748B;margin-bottom:12px}
+.mn{font-family:'Manrope',sans-serif;font-weight:800;font-size:2.4rem;color:#fff;letter-spacing:-.03em;line-height:1;margin-bottom:4px}
+.mn span{font-size:1.5rem}
+.ci2{color:#A5B4FC}.ct2{color:#5EEAD4}
+.mb{height:2px;border-radius:2px;margin:10px 0}
+.bi{background:linear-gradient(90deg,#6366F1,transparent)}
+.bt{background:linear-gradient(90deg,#14B8A6,transparent)}
+.md{font-size:11px;color:#64748B;line-height:1.5;margin-bottom:8px}
+.ms{font-size:11px;font-weight:700}
+.ms.i{color:#818CF8}.ms.t{color:#5EEAD4}
+.sm{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.smc{background:rgba(241,245,249,.8);border:1px solid #E2E8F0;border-radius:var(--r-md);padding:12px;text-align:center}
+.smn{font-weight:800;font-size:18px;letter-spacing:-.02em}
+.sml{font-size:11px;color:var(--s5);margin-top:2px}
+.cii{color:var(--ind)}.ctt{color:var(--teal)}.cvv{color:#7C3AED}
 
-  /* ── Metric cards ── */
-  .metric-card {
-    background: linear-gradient(145deg, #0A0F1E 0%, #141E35 60%, #0F1E2E 100%);
-    border: 1px solid rgba(255,255,255,0.06);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.35s cubic-bezier(.22,.68,0,1.2), box-shadow 0.35s ease;
-  }
-  .metric-card::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 30% 0%, rgba(99,102,241,0.18) 0%, transparent 65%);
-    opacity: 0;
-    transition: opacity 0.35s ease;
-  }
-  .metric-card:hover::after { opacity: 1; }
-  .metric-card:hover {
-    transform: translateY(-5px) scale(1.01);
-    box-shadow: 0 24px 48px rgba(99,102,241,0.22), 0 8px 16px rgba(0,0,0,0.15);
-  }
+/* ── EXPERIENCE ── */
+.ew{padding:36px 44px}
+.ec{background:rgba(255,255,255,.88);border-radius:var(--r-lg);padding:26px 28px;margin-bottom:14px;border-left:3px solid transparent;box-shadow:var(--sh-c);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;cursor:default}
+.ec:last-child{margin-bottom:0}
+.ec:hover{transform:translateX(6px);border-left-color:var(--ind);box-shadow:0 12px 36px rgba(0,0,0,.10)}
+.eh{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:18px}
+.eb{display:inline-block;font-size:10.5px;font-weight:700;padding:4px 12px;border-radius:100px;margin-bottom:8px}
+.bc{background:linear-gradient(90deg,#6366F1,#14B8A6);color:white}
+.bp{background:#F1F5F9;color:#64748B}
+.bs{background:#F5F3FF;color:#6D28D9}
+.ectx{font-size:11px;color:#94A3B8;margin-left:8px}
+.et{font-size:18px;font-weight:700;color:var(--s9);letter-spacing:-.02em;margin-bottom:4px}
+.eco{font-size:13px;font-weight:700}
+.ei{color:var(--ind)}.eti{color:#0D9488}.evi{color:#7C3AED}
+.ed{text-align:right;flex-shrink:0}
+.ed1{font-size:13px;font-weight:600;color:var(--s7)}
+.ed2{font-size:11px;color:#94A3B8;margin-top:3px}
+.ebl{margin-bottom:16px}
+.ebul{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--s6);line-height:1.6;margin-bottom:10px}
+.ebul:last-child{margin-bottom:0}
+.arr{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;flex-shrink:0;margin-top:2px}
+.ai2{background:#EEF2FF;color:#4F46E5}
+.at2{background:#F0FDFA;color:#0D9488}
+.av2{background:#F5F3FF;color:#7C3AED}
+.aa2{background:#FFFBEB;color:#B45309}
+.etags{display:flex;flex-wrap:wrap;gap:6px}
 
-  /* ── Experience cards ── */
-  .exp-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    border-left: 3px solid transparent;
-    transition: border-color .25s ease, transform .25s ease;
-  }
-  .exp-card:hover {
-    transform: translateX(5px);
-    border-left-color: var(--indigo);
-    box-shadow: 0 10px 36px rgba(0,0,0,0.09);
-  }
+/* ── SKILLS ── */
+.sr{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+.sw{padding:32px 36px}
+.sg{margin-bottom:20px}
+.sg:last-child{margin-bottom:0}
+.sgl{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#94A3B8;margin-bottom:10px;display:block}
+.bdg{display:flex;flex-wrap:wrap;gap:6px}
+.badge{display:inline-block;padding:6px 12px;border-radius:var(--r-sm);font-size:12px;font-weight:600;cursor:default;transition:all .22s cubic-bezier(.22,.68,0,1.2)}
+.badge:hover{background:linear-gradient(90deg,#6366F1,#14B8A6)!important;color:white!important;border-color:transparent!important;transform:translateY(-2px) scale(1.05);box-shadow:0 8px 20px rgba(99,102,241,.28)}
+.bdi{background:var(--ind-s);color:var(--ind-d);border:1px solid rgba(99,102,241,.16)}
+.bdt{background:var(--teal-s);color:#0F766E;border:1px solid rgba(20,184,166,.16)}
+.bdv{background:var(--vio-s);color:#6D28D9;border:1px solid rgba(124,58,237,.16)}
+.bda{background:var(--amb-s);color:#B45309;border:1px solid rgba(217,119,6,.16)}
+.mw{padding:32px 36px}
+.msk{background:rgba(255,255,255,.85);border-radius:var(--r-md);padding:16px 18px;border-left:4px solid transparent;margin-bottom:12px;box-shadow:0 1px 6px rgba(15,23,42,.05);transition:box-shadow .25s ease}
+.msk:last-child{margin-bottom:0}
+.msk:hover{box-shadow:0 6px 20px rgba(15,23,42,.10)}
+.mi{border-left-color:#818CF8}.mtt{border-left-color:#2DD4BF}.mv{border-left-color:#A78BFA}.ma{border-left-color:#FBBF24}
+.mt{font-size:13px;font-weight:700;color:var(--s7);margin-bottom:4px}
+.mdc{font-size:12px;color:#64748B;line-height:1.55}
+.mbar{height:3px;background:#E2E8F0;border-radius:4px;margin-top:10px;overflow:hidden}
+.mfill{height:100%;border-radius:4px;background:linear-gradient(90deg,#6366F1,#14B8A6)}
 
-  /* ── Skill badges ── */
-  .skill-badge {
-    transition: all 0.22s cubic-bezier(.22,.68,0,1.2);
-    cursor: default;
-  }
-  .skill-badge:hover {
-    background: linear-gradient(90deg, #6366F1, #14B8A6) !important;
-    color: white !important;
-    border-color: transparent !important;
-    transform: translateY(-2px) scale(1.06);
-    box-shadow: 0 8px 20px rgba(99,102,241,0.28);
-  }
+/* ── EDUCATION ── */
+.eduw{padding:36px 44px}
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.edc{border-radius:var(--r-lg);padding:24px 22px;position:relative;overflow:hidden;transition:transform .3s cubic-bezier(.22,.68,0,1.2),box-shadow .3s ease;cursor:default}
+.edc:hover{transform:translateY(-6px);box-shadow:0 24px 48px rgba(0,0,0,.28)}
+.ec1{background:linear-gradient(145deg,#090E1C,#1E1B4B)}
+.ec2{background:linear-gradient(145deg,#090E1C,#042F2E)}
+.ec3{background:linear-gradient(145deg,#090E1C,#2E1065)}
+.ey{position:absolute;top:14px;right:14px;font-size:11px;font-weight:700;padding:3px 9px;border-radius:100px}
+.eyi{background:rgba(99,102,241,.22);color:#A5B4FC}
+.eyt{background:rgba(20,184,166,.22);color:#5EEAD4}
+.eyv{background:rgba(139,92,246,.22);color:#C4B5FD}
+.eicon{font-size:28px;margin-bottom:14px}
+.etit{font-size:13.5px;font-weight:700;color:#F8FAFC;margin-bottom:8px;line-height:1.4}
+.esub{font-size:11.5px;color:#64748B;margin-bottom:10px;line-height:1.5}
+.estat{font-size:11px;font-weight:700}
+.es-i{color:#818CF8}.es-t{color:#5EEAD4}.es-v{color:#C4B5FD}
 
-  /* ── Glow accent line ── */
-  .glow-line {
-    background: linear-gradient(90deg, #6366F1, #14B8A6, transparent);
-    height: 2px;
-    border-radius: 2px;
-  }
+/* ── FOOTER ── */
+.ft{text-align:center;padding:32px 0 0}
+.fl{width:96px;height:2px;border-radius:2px;background:linear-gradient(90deg,#6366F1,#14B8A6,transparent);margin:0 auto 16px}
+.fn{font-weight:600;color:var(--s5);font-size:13px;margin-bottom:4px}
+.fs{font-size:12px;color:#CBD5E1}
 
-  /* ── Section label ── */
-  .section-num {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10.5px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    color: #94A3B8;
-    text-transform: uppercase;
-  }
-
-  /* ── Animations ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(28px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .fade-up { animation: fadeUp 0.75s cubic-bezier(.22,.68,0,1) forwards; }
-  .d1 { animation-delay: 0.08s; opacity: 0; }
-  .d2 { animation-delay: 0.18s; opacity: 0; }
-  .d3 { animation-delay: 0.28s; opacity: 0; }
-  .d4 { animation-delay: 0.38s; opacity: 0; }
-  .d5 { animation-delay: 0.48s; opacity: 0; }
-
-  /* ── Tag variants ── */
-  .tag-indigo { background: rgba(99,102,241,0.08); color: #4F46E5; border: 1px solid rgba(99,102,241,0.18); }
-  .tag-teal   { background: rgba(20,184,166,0.08);  color: #0D9488; border: 1px solid rgba(20,184,166,0.18); }
-
-  /* ── Value prop tags ── */
-  .vp-tag {
-    display: flex; align-items: center; gap: 8px;
-    padding: 10px 14px;
-    border-radius: 14px;
-    font-size: 13px;
-    font-weight: 600;
-    transition: transform 0.2s ease;
-  }
-  .vp-tag:hover { transform: translateX(3px); }
-
-  /* ── Metric number ── */
-  .metric-num {
-    font-family: 'Syne', sans-serif;
-    font-size: 2.6rem;
-    font-weight: 800;
-    color: white;
-    line-height: 1;
-  }
-
-  /* ── Education card hover ── */
-  .edu-card {
-    transition: transform 0.3s cubic-bezier(.22,.68,0,1.2), box-shadow 0.3s ease;
-  }
-  .edu-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-  }
-
-  /* ── Meta-skill bars ── */
-  .skill-bar {
-    height: 3px;
-    background: #E2E8F0;
-    border-radius: 4px;
-    margin-top: 8px;
-    overflow: hidden;
-  }
-  .skill-bar-fill {
-    height: 100%;
-    border-radius: 4px;
-    background: linear-gradient(90deg, #6366F1, #14B8A6);
-    transition: width 1s ease;
-  }
-
-  @media print {
-    body { background: white; }
-    .metric-card:hover, .exp-card:hover, .edu-card:hover { transform: none; box-shadow: none; }
-  }
+@media(max-width:768px){
+  body{padding:20px 12px 48px}
+  .hdr{grid-template-columns:1fr;padding:32px 28px;gap:24px}
+  .cc{align-items:flex-start}
+  .vp{grid-template-columns:1fr;padding:28px 24px;gap:24px}
+  .vp-tags{padding-top:0}
+  .dw{padding:24px 20px}
+  .mg{grid-template-columns:repeat(2,1fr)}
+  .ew{padding:28px 24px}
+  .eh{flex-direction:column;gap:8px}
+  .ed{text-align:left}
+  .sr{grid-template-columns:1fr}
+  .sw,.mw{padding:28px 24px}
+  .eduw{padding:28px 24px}
+  .edu-grid{grid-template-columns:1fr}
+}
+@media print{
+  body{background:white;padding:0}
+  .glass{box-shadow:none;border:1px solid #E2E8F0;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .mc,.ec,.edc{box-shadow:none!important;transform:none!important}
+}
 </style>
 </head>
-<body class="min-h-screen py-10 md:py-16">
+<body>
+<div class="wrap">
 
-<div class="max-w-5xl mx-auto px-4">
+<header class="glass section rise">
+<div class="hdr">
+  <div>
+    <span class="lbl" style="margin-bottom:18px">CV · 2026</span>
+    <div class="n1">Павел</div>
+    <div class="n2">Сайганов</div>
+    <div class="glow"></div>
+    <p class="tl-role">AI &amp; Продуктовый Маркетинг · Кросс-культурное Бизнес-развитие<br><em>Европа · Африка · Латинская Америка</em></p>
+    <p class="tl-q">"Be the change you want to see in the world."</p>
+  </div>
+  <div class="cc">
+    <div class="sb"><span class="pd"></span>Открыт к C-Level позициям</div>
+    <div class="cl">
+      <a href="mailto:p.sayganov@gmail.com" class="ci">
+        <svg class="ico" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        p.sayganov@gmail.com
+      </a>
+      <a href="https://t.me/paveletty" class="ci">
+        <svg class="ico" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.48 14.26l-2.95-.924c-.642-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.326.326z"/></svg>
+        @paveletty
+      </a>
+      <span class="ci">
+        <svg class="ico" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Удалённо · Глобально
+      </span>
+    </div>
+  </div>
+</div>
+</header>
 
-  <!-- ══════════════════════════════════════
-       01 · HEADER
-  ══════════════════════════════════════ -->
-  <header class="glass rounded-3xl p-8 md:p-12 mb-5 fade-up shadow-xl">
-    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+<section class="glass section rise d1">
+<div class="vp">
+  <div class="vp-t">
+    <span class="lbl" style="margin-bottom:20px">01 · Ценностное предложение</span>
+    <p>Эксперт по международным коммуникациям и маркетингу с <strong>12+ годами опыта</strong> на рынках Латинской Америки, Африки и России (Software, Mining, Глобальные мероприятия).</p>
+    <p>Специализируюсь на трансформации сложных продуктов в понятные медиа-нарративы и адаптации <span class="ai">UVP цифровых продуктов</span> под культурный код локального рынка.</p>
+    <p>Опыт переговоров уровня C-Level и госструктур. Координировал 5+ департаментов сборной Португалии на ЧМ-2018 — «единое окно» для FIFA и городских властей.</p>
+    <p>Свободно: <span class="at">португальский (C2), английский (C2), испанский (B2)</span>, русский (родной).</p>
+  </div>
+  <div class="vp-tags">
+    <div class="vp-tag ti">🤖 AI-First стратегия</div>
+    <div class="vp-tag tt">🌍 Глобальные команды</div>
+    <div class="vp-tag tv">🚀 Продуктовый сторителлинг</div>
+    <div class="vp-tag ta">📈 Операц. эффективность</div>
+  </div>
+</div>
+</section>
 
-      <!-- Name + Role -->
-      <div class="flex-1">
-        <div class="section-num mb-4">CV · 2026</div>
+<section class="glass section rise d2">
+<div class="dw">
+  <span class="lbl" style="margin-bottom:20px">02 · Дашборд достижений</span>
+  <div class="mg">
+    <div class="mc"><div class="me">Скорость контента</div><div class="mn"><span class="ci2">+40</span><span>%</span></div><div class="mb bi"></div><div class="md">Ускорение производства SEO-материалов через AI-инструменты</div><div class="ms i">↑ Production Velocity</div></div>
+    <div class="mc"><div class="me">Точность</div><div class="mn"><span class="ct2">100</span><span>%</span></div><div class="mb bt"></div><div class="md">Редактура технической и юридической документации без ошибок</div><div class="ms t">✓ Гарантия качества</div></div>
+    <div class="mc"><div class="me">Скорость задач</div><div class="mn"><span class="ci2">−30</span><span>%</span></div><div class="mb bi"></div><div class="md">Сокращение сроков через централизованную систему трекинга</div><div class="ms i">↑ Операц. эффективность</div></div>
+    <div class="mc"><div class="me">Ресурсы (ЧМ-2018)</div><div class="mn"><span class="ct2">−20</span><span>%</span></div><div class="mb bt"></div><div class="md">Оптимизация расходов при 100% точности в Live-режиме</div><div class="ms t">✓ Кризисный менеджмент</div></div>
+  </div>
+  <div class="sm">
+    <div class="smc"><div class="smn cii">200+</div><div class="sml">Переговоров высокого уровня</div></div>
+    <div class="smc"><div class="smn ctt">4</div><div class="sml">Языка на уровне C2/Native</div></div>
+    <div class="smc"><div class="smn cvv">3</div><div class="sml">Континента · 13+ лет опыта</div></div>
+  </div>
+</div>
+</section>
 
-        <h1 class="syne text-5xl md:text-7xl font-extrabold text-slate-900 leading-none tracking-tight mb-1">
-          Pavel
-        </h1>
-        <h1 class="syne text-5xl md:text-7xl font-extrabold leading-none tracking-tight mb-4">
-          <span class="bg-gradient-to-r from-indigo-500 to-teal-400 bg-clip-text text-transparent">Sayganov</span>
-        </h1>
+<section class="glass section rise d3">
+<div class="ew">
+  <span class="lbl" style="margin-bottom:24px">03 · Опыт работы</span>
 
-        <div class="glow-line w-20 mb-5"></div>
-
-        <p class="text-slate-700 font-medium text-sm md:text-base max-w-sm leading-relaxed mb-1">
-          AI &amp; Product Marketing · Cross-Cultural Business Development
-        </p>
-        <p class="text-slate-500 text-sm max-w-sm leading-relaxed mb-3">
-          Europe · Africa · Latin America
-        </p>
-        <p class="text-indigo-600 font-semibold text-sm">AI-Augmented Expert</p>
-
-        <p class="mt-4 text-xs text-slate-400 italic">
-          "Be the change you want to see in the world."
-        </p>
+  <div class="ec">
+    <div class="eh">
+      <div>
+        <div><span class="eb bc">Текущее место</span><span class="ectx">Рост &amp; AI-трансформация</span></div>
+        <div class="et">Специалист по маркетингу (Бразилия)</div>
+        <div class="eco ei">1С-Битрикс24</div>
       </div>
+      <div class="ed"><div class="ed1">Январь 2025 — н.в.</div><div class="ed2">1 год 3 мес.</div></div>
+    </div>
+    <div class="ebl">
+      <div class="ebul"><span class="arr ai2">→</span><span><strong>BizDev:</strong> разработка стратегии развития продукта на рынке Бразилии. Адаптация ценностного предложения под локальный культурный код.</span></div>
+      <div class="ebul"><span class="arr at2">→</span><span><strong>AI-First подход:</strong> внедрил нейросети в рутину (SEO, SMM, Visual). Сократил время производства контента на 50% без потери качества.</span></div>
+      <div class="ebul"><span class="arr av2">→</span><span><strong>Аналитика и отчётность:</strong> система мониторинга на базе AI для контроля ROI. Коррекция планов на основе данных, а не интуиции.</span></div>
+      <div class="ebul"><span class="arr aa2">→</span><span><strong>Продукт:</strong> анализ жизненного цикла и конкурентной среды для корректировки планов продаж и рыночной стратегии.</span></div>
+    </div>
+    <div class="etags">
+      <span class="badge bdi">AI Agents</span><span class="badge bdt">Growth Marketing</span><span class="badge bdi">Рыночная стратегия</span><span class="badge bdv">Media Relations</span><span class="badge bda">Аналитика данных</span>
+    </div>
+  </div>
 
-      <!-- Contacts -->
-      <div class="flex flex-col gap-3 md:items-end">
-        <div class="flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold px-3 py-1.5 rounded-full self-start md:self-auto">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          Open to C-Level opportunities
-        </div>
-
-        <div class="flex flex-col gap-2 text-sm text-slate-600 mt-1">
-          <a href="mailto:p.sayganov@gmail.com" class="flex items-center gap-2 hover:text-indigo-600 transition-colors">
-            <svg class="w-4 h-4 text-indigo-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            p.sayganov@gmail.com
-          </a>
-          <a href="https://t.me/paveletty" class="flex items-center gap-2 hover:text-indigo-600 transition-colors">
-            <svg class="w-4 h-4 text-indigo-400 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.48 14.26l-2.95-.924c-.642-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.326.326z"/></svg>
-            @paveletty
-          </a>
-          <span class="flex items-center gap-2 text-slate-500">
-            <svg class="w-4 h-4 text-indigo-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            Remote · Global
-          </span>
-        </div>
-        <div class="hero__contacts">
-          <p class="hero__contact-item"><span class="hero__icon" aria-label="email icon">✉</span><span>Email: [EMAIL]</span></p>
-          <p class="hero__contact-item"><span class="hero__icon" aria-label="telegram icon">◉</span><span>Telegram: [TG]</span></p>
-          <p class="hero__contact-item"><span class="hero__icon" aria-label="linkedin icon">in</span><span>LinkedIn: [LINKEDIN]</span></p>
-          <p class="hero__contact-item"><span class="hero__icon" aria-label="location icon">⌖</span><span>Location: Remote · EMEA / Global</span></p>
-        </div>
-      </nav>
-    </header>
-
-    <main id="top">
-      <section class="hero container" aria-labelledby="hero-title">
-        <div class="hero-wrap">
-          <p class="eyebrow">Product-minded Front-End Developer</p>
-          <h1 id="hero-title">Hello. I'm Pavel Sayganov.</h1>
-          <p class="hero-subtitle">Front-End Developer. Love at first site. I design clear digital narratives, then ship them with measurable impact.</p>
-        </div>
-      </section>
-
-      <section id="highlights" class="section alt">
-        <div class="container">
-          <h2>Highlights.</h2>
-          <p class="section-intro">A curated snapshot of my core strengths — storytelling, systems thinking and consistent delivery for high-visibility products.</p>
-
-          <div class="bento">
-            <article class="tile tile-1">
-              <h3>Interface Storytelling</h3>
-              <p>Turning complex ideas into elegant, conversion-focused interfaces that feel intuitive from the first interaction.</p>
-              <div class="tag-row">
-                <span class="tag citrus">UI Narrative</span>
-                <span class="tag silver">Information Architecture</span>
-              </div>
-            </article>
-
-            <article class="tile tile-2">
-              <h3>Front-End Craft</h3>
-              <p>Semantic HTML5, scalable CSS architecture and resilient responsive behavior across modern devices.</p>
-              <div class="tag-row">
-                <span class="tag indigo">HTML5</span>
-                <span class="tag indigo">CSS3</span>
-                <span class="tag indigo">JavaScript</span>
-              </div>
-            </article>
-
-            <article class="tile tile-3">
-              <h3>Optimization Mindset</h3>
-              <p>I refine layouts and content systems to improve speed, maintainability and the clarity of user journeys.</p>
-              <div class="tag-row">
-                <span class="tag blush">Performance</span>
-                <span class="tag silver">QA Precision</span>
-              </div>
-            </article>
-
-            <article class="tile tile-4">
-              <h3>Cross-Functional Delivery</h3>
-              <p>Effective collaboration with product, content and operations teams in fast-paced and high-stakes environments.</p>
-              <div class="tag-row">
-                <span class="tag citrus">Team Sync</span>
-                <span class="tag blush">Execution</span>
-              </div>
-            </article>
-
-            <article class="tile tile-5">
-              <h3>AI-Enhanced Workflow</h3>
-              <p>Integrating AI tooling into day-to-day production to accelerate content and interface iterations without quality loss.</p>
-              <div class="tag-row">
-                <span class="tag indigo">Automation</span>
-                <span class="tag silver">Prompt Design</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="experience" class="section">
-        <div class="container">
-          <h2>Performance.</h2>
-          <p class="section-intro">Selected experience where design quality met operational excellence — from editorial acceleration to mission-critical event coordination.</p>
-
-          <div class="experience-list">
-            <article class="role">
-              <div class="role-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 7h16"></path><path d="M7 4v6"></path><path d="M17 4v6"></path><rect x="4" y="7" width="16" height="13" rx="2"></rect>
-                </svg>
-              </div>
-              <div>
-                <h3>Content & Product Communication Lead</h3>
-                <div class="role-meta">Media & digital products · 2022 — Present</div>
-                <p>Accelerated SEO and creative production by implementing AI-assisted editorial pipelines and tighter quality standards.</p>
-              </div>
-            </article>
-
-            <article class="role">
-              <div class="role-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 12h16"></path><path d="M4 6h16"></path><path d="M4 18h10"></path>
-                </svg>
-              </div>
-              <div>
-                <h3>Technical & Legal Editor</h3>
-                <div class="role-meta">Documentation systems · 2019 — 2022</div>
-                <p>Edited complex technical and legal materials with strict terminology accuracy and consistent reader comprehension.</p>
-              </div>
-            </article>
-
-            <article class="role">
-              <div class="role-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l3 2"></path>
-                </svg>
-              </div>
-              <div>
-                <h3>Operations Coordinator (World Cup 2018)</h3>
-                <div class="role-meta">Media, logistics & safety · Project role</div>
-                <p>Coordinated multi-team communication and logistics in live mode, helping reduce operational costs while preserving message precision.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer id="contact">
-      <div class="container">
-        <div class="footnotes">
-          <span><sup>*</sup> Portfolio available upon request.</span>
-          <span><sup>1</sup> Contact: <a href="mailto:pavel.sayganov@gmail.com">pavel.sayganov@gmail.com</a></span>
-          <span><sup>2</sup> LinkedIn: <a href="#" aria-label="LinkedIn link">Add your profile URL</a></span>
-        </div>
-        <div class="copyright">Copyright © 2026 Pavel Sayganov. All rights reserved.</div>
+  <div class="ec">
+    <div class="eh">
+      <div>
+        <div><span class="eb bp">2019–2025</span><span class="ectx">Ангола · Поддержка топ-менеджмента</span></div>
+        <div class="et">Руководитель исполнительного офиса (при CFO)</div>
+        <div class="eco eti">Catoca Mining Company (Ангола)</div>
       </div>
-    </footer>
-  </body>
+      <div class="ed"><div class="ed1">Авг. 2019 — Янв. 2025</div><div class="ed2">5 лет 5 мес.</div></div>
+    </div>
+    <div class="ebl">
+      <div class="ebul"><span class="arr aa2">→</span><span><strong>Работа с контрагентами:</strong> контроль и мониторинг деятельности партнёров. Управление рисками при взаимодействии с внешними поставщиками.</span></div>
+      <div class="ebul"><span class="arr at2">→</span><span><strong>GR и госорганы:</strong> запросы в министерства и нац. компании Анголы. Организация переговоров G2B высокого уровня — 200+ встреч.</span></div>
+      <div class="ebul"><span class="arr ai2">→</span><span><strong>Аналитика и планирование:</strong> Market Intelligence отчёты для C-Level. Анализ социально-экономического положения региона для корректировки стратегии.</span></div>
+      <div class="ebul"><span class="arr av2">→</span><span><strong>Оптимизация процессов:</strong> централизованная система трекинга — сроки исполнения поручений сократились на 30%.</span></div>
+    </div>
+    <div class="etags">
+      <span class="badge bdt">Executive Comms</span><span class="badge bda">Risk Control</span><span class="badge bdi">GR &amp; Дипломатия</span><span class="badge bdv">Strategic Analysis</span><span class="badge bdt">Operational Mgmt</span>
+    </div>
+  </div>
+
+  <div class="ec">
+    <div class="eh">
+      <div>
+        <div><span class="eb bs">13+ лет · Проектная деятельность</span></div>
+        <div class="et">Международные проекты и Протокол</div>
+        <div class="eco evi">Независимые проекты · Африка, Латам, Европа</div>
+      </div>
+      <div class="ed"><div class="ed1">Окт. 2012 — н.в.</div><div class="ed2">13 лет 6 мес.</div></div>
+    </div>
+    <div class="ebl">
+      <div class="ebul"><span class="arr av2">→</span><span><strong>ЧМ-2018 · Сборная Португалии:</strong> руководство операционным сопровождением. Координация 5 департаментов (логистика, безопасность, медиа). «Единое окно» для FIFA и городских властей. Лично знаком с Криштиану Роналду.</span></div>
+      <div class="ebul"><span class="arr at2">→</span><span><strong>Форум «Россия–Африка» и госмероприятия:</strong> подготовка и проведение форумов, конференций, официальных визитов. Взаимодействие с российскими и зарубежными госорганами.</span></div>
+      <div class="ebul"><span class="arr ai2">→</span><span><strong>Встречи «под ключ»:</strong> логистика, протокол, программа для партнёров из Африки и Латинской Америки.</span></div>
+    </div>
+    <div class="etags">
+      <span class="badge bdv">Crisis Management</span><span class="badge bdt">Синхронный перевод</span><span class="badge bdi">Диплом. протокол</span><span class="badge bda">Организация событий</span>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="sr rise d4">
+  <section class="glass">
+  <div class="sw">
+    <span class="lbl" style="margin-bottom:22px">04 · Стек и языки</span>
+    <div class="sg"><span class="sgl">Языки и коммуникации</span><div class="bdg"><span class="badge bdi">Английский C2</span><span class="badge bdi">Португальский C2</span><span class="badge bdi">Испанский B2</span><span class="badge bdi">Русский (родной)</span></div></div>
+    <div class="sg"><span class="sgl">Экспертные навыки</span><div class="bdg"><span class="badge bdt">Синхронный перевод</span><span class="badge bdt">Визиты высокого уровня</span><span class="badge bdt">Дипломатический протокол</span><span class="badge bdt">Business Intelligence</span></div></div>
+    <div class="sg"><span class="sgl">Стратегические инструменты</span><div class="bdg"><span class="badge bdv">Generative AI</span><span class="badge bdv">Process Automation</span><span class="badge bdv">Кросс-культурный этикет</span><span class="badge bdv">Конфиденциальность</span></div></div>
+  </div>
+  </section>
+  <section class="glass">
+  <div class="mw">
+    <span class="lbl" style="margin-bottom:22px">05 · Мета-навыки</span>
+    <div class="msk mi"><div class="mt">Финансовая грамотность (ROI)</div><div class="mdc">Понимание P&amp;L и бизнес-метрик (курс CFO). Работа ради прибыли, а не ради процесса.</div><div class="mbar"><div class="mfill" style="width:88%"></div></div></div>
+    <div class="msk mtt"><div class="mt">Кросс-культурная адаптация</div><div class="mdc">Опыт на трёх континентах (Европа, Латам, Африка). Умение находить подход к любой аудитории.</div><div class="mbar"><div class="mfill" style="width:96%"></div></div></div>
+    <div class="msk mv"><div class="mt">Стратегическое партнёрство</div><div class="mdc">Выстраивание диалога с C-Level и госструктурами. Перевод технических смыслов на язык бизнеса.</div><div class="mbar"><div class="mfill" style="width:93%"></div></div></div>
+    <div class="msk ma"><div class="mt">Работа с первыми лицами</div><div class="mdc">VIP-делегации на крупнейших мероприятиях. Лично знаком с Криштиану Роналду.</div><div class="mbar"><div class="mfill" style="width:98%"></div></div></div>
+  </div>
+  </section>
+</div>
+
+<section class="glass section rise d5">
+<div class="eduw">
+  <span class="lbl" style="margin-bottom:24px">06 · Образование и сертификации</span>
+  <div class="edu-grid">
+    <div class="edc ec1"><div class="ey eyi">2026</div><div class="eicon">🎓</div><div class="etit">Финансовый директор (CFO)</div><div class="esub">Eduson Academy · Executive Education</div><div class="estat es-i">В процессе →</div></div>
+    <div class="edc ec2"><div class="ey eyt">2014</div><div class="eicon">🎓</div><div class="etit">Лингвистика и переводоведение</div><div class="esub">Теория языка и стилистика · Диплом специалиста</div><div class="estat es-t">✓ Окончено</div></div>
+    <div class="edc ec3"><div class="ey eyv">2013–2014</div><div class="eicon">🌐</div><div class="etit">Международные коммуникации</div><div class="esub">Universidade do Minho, Португалия</div><div class="estat es-v">✓ Завершено</div></div>
+  </div>
+</div>
+</section>
+
+<footer class="ft rise d6">
+  <div class="fl"></div>
+  <p class="fn">Павел Сайганов · 2026</p>
+  <p class="fs">AI &amp; Продуктовый Маркетинг · Кросс-культурное Бизнес-развитие · Европа · Африка · Латинская Америка</p>
+</footer>
+
+</div>
+</body>
 </html>
