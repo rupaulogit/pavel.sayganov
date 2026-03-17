@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Павел Сайганов — CV 2026</title>
+<style>
+/* ── RESET ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:17px;-webkit-text-size-adjust:100%}
+
+/* ── APPLE SF PRO SYSTEM ──
+   На Apple-устройствах автоматически подхватится настоящий SF Pro.
+   На остальных — Helvetica Neue / Arial.
+─────────────────────────────── */
+:root{
+  --fd:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --ft:"SF Pro Text",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+
+  /* Palette — Apple finish names */
+  --white:#ffffff;
+  --bg:#f5f5f7;
+  --g50:#f5f5f7;
+  --g100:#e8e8ed;
+  --g150:#d2d2d7;
+  --g300:#a1a1a6;
+  --g400:#6e6e73;
+  --g500:#424245;
+  --g600:#1d1d1f;
+
+  /* Indigo finish */
+  --ind:#596680;
+  --ind-l:#a8b5cc;
+  --ind-s:rgba(89,102,128,.09);
+  --ind-b:rgba(89,102,128,.14);
+
+  /* Функциональные */
+  --blue:#0071e3;
+  --blue-s:rgba(0,113,227,.07);
+  --blue-b:rgba(0,113,227,.12);
+  --citrus-s:rgba(168,168,74,.08);
+  --citrus-b:rgba(168,168,74,.14);
+  --citrus:#6b6b20;
+  --blush-s:rgba(200,160,160,.12);
+  --blush-b:rgba(200,150,150,.20);
+  --blush:#8b4a4a;
+  --green:#1d8348;
+  --green-s:#f0fdf4;
+  --green-b:#bbf7d0;
+
+  /* Radii */
+  --r-xs:6px;--r-sm:10px;--r-md:16px;--r-lg:22px;--r-xl:28px;
+
+  /* Shadows */
+  --sh1:0 1px 3px rgba(0,0,0,.05),0 1px 2px rgba(0,0,0,.03);
+  --sh2:0 4px 16px rgba(0,0,0,.07),0 1px 4px rgba(0,0,0,.04);
+  --sh3:0 8px 32px rgba(0,0,0,.09),0 2px 8px rgba(0,0,0,.05);
+}
+
+body{
+  font-family:var(--ft);
+  font-size:17px;line-height:1.47;font-weight:400;
+  letter-spacing:-0.022em;color:var(--g600);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  min-height:100vh;padding:0 20px 80px;
+}
+
+/* ── Sticky accent topbar ── */
+.topbar{
+  position:sticky;top:0;z-index:100;
+  height:3px;margin-bottom:52px;
+  background:linear-gradient(90deg,var(--ind),#a8b5cc,#c8b890,#d0a0a0);
+}
+
+.wrap{max-width:980px;margin:0 auto}
+.section{margin-bottom:14px}
+
+/* White card */
+.card{
+  background:var(--white);
+  border-radius:var(--r-xl);
+  box-shadow:var(--sh2);
+  overflow:hidden;
+}
+
+/* Animations */
+@keyframes fi{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.fi{animation:fi .55s cubic-bezier(.25,.46,.45,.94) both}
+.a1{animation-delay:.05s}.a2{animation-delay:.12s}.a3{animation-delay:.19s}
+.a4{animation-delay:.26s}.a5{animation-delay:.33s}.a6{animation-delay:.40s}
+@keyframes blink{50%{opacity:.3}}
+
+/* ════ HEADER ════ */
+.hdr{padding:56px 60px 0;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:start}
+.cv-ey{font-family:var(--ft);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--g300);display:block;margin-bottom:22px}
+.n1{font-family:var(--fd);font-weight:700;letter-spacing:-.045em;line-height:.92;font-size:clamp(50px,7.5vw,80px);color:var(--g600)}
+.n2{font-family:var(--fd);font-weight:700;letter-spacing:-.045em;line-height:.92;font-size:clamp(50px,7.5vw,80px);color:var(--ind);margin-bottom:28px}
+.hl{width:40px;height:1px;background:var(--g100);margin:26px 0}
+.tl{font-family:var(--ft);font-size:15px;font-weight:400;color:var(--g400);line-height:1.6;max-width:360px;letter-spacing:-.015em}
+.tl strong{color:var(--g500);font-weight:600}
+.tl em{color:var(--ind);font-style:normal;font-weight:600}
+.tq{margin-top:20px;font-family:var(--ft);font-size:13px;font-style:italic;color:var(--g300);max-width:340px;letter-spacing:0}
+
+/* contacts */
+.cc{display:flex;flex-direction:column;gap:9px;align-items:flex-end;padding-top:6px}
+.sb{display:inline-flex;align-items:center;gap:6px;font-family:var(--ft);font-size:11px;font-weight:600;color:var(--green);background:var(--green-s);border:1px solid var(--green-b);padding:5px 13px;border-radius:100px;white-space:nowrap}
+.pd{width:6px;height:6px;border-radius:50%;background:#34d399;animation:blink 2s ease infinite}
+.cl{display:flex;flex-direction:column;gap:7px;margin-top:6px}
+.ci{display:flex;align-items:center;gap:8px;font-family:var(--ft);font-size:13px;color:var(--g400);text-decoration:none;transition:color .18s;letter-spacing:-.01em}
+.ci:hover{color:var(--ind)}
+.ico{width:14px;height:14px;color:var(--ind);flex-shrink:0}
+
+/* header strip */
+.hstrip{padding:22px 60px 24px;border-top:1px solid var(--g50);display:flex;gap:28px;align-items:center;flex-wrap:wrap;margin-top:28px}
+.sl{font-family:var(--ft);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--g300);flex-shrink:0}
+.chips{display:flex;gap:7px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--ft);font-size:12px;font-weight:600;padding:6px 12px;border-radius:var(--r-sm);transition:transform .18s;cursor:default;border:1px solid transparent}
+.chip:hover{transform:translateX(2px)}
+.ch-i{background:var(--ind-s);color:var(--ind);border-color:var(--ind-b)}
+.ch-b{background:var(--blue-s);color:var(--blue);border-color:var(--blue-b)}
+.ch-c{background:var(--citrus-s);color:var(--citrus);border-color:var(--citrus-b)}
+.ch-r{background:var(--blush-s);color:var(--blush);border-color:var(--blush-b)}
+
+/* ════ SECTION LABEL ════ */
+.slbl{font-family:var(--ft);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--g300);margin-bottom:24px;display:block}
+
+/* ════ VALUE PROP ════ */
+.vp{display:grid;grid-template-columns:1fr 196px;gap:48px;padding:48px 60px}
+.vp-t p{font-family:var(--ft);font-size:15px;color:var(--g400);line-height:1.68;margin-bottom:14px;letter-spacing:-.015em}
+.vp-t p:last-child{margin-bottom:0}
+.vp-t strong{color:var(--g500);font-weight:600}
+.hli{color:var(--ind);font-weight:600}.hlt{color:#0a6b5e;font-weight:600}
+
+.markets{background:var(--g50);border-radius:var(--r-lg);padding:22px 18px}
+.mlbl{font-family:var(--ft);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g300);margin-bottom:16px;display:block}
+.mi{display:flex;align-items:center;gap:10px;font-family:var(--ft);font-size:13px;color:var(--g500);font-weight:600;margin-bottom:9px;letter-spacing:-.01em}
+.mi:last-child{margin-bottom:0}
+.flag{width:28px;height:28px;background:white;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;box-shadow:var(--sh1)}
+
+/* ════ DASHBOARD ════ */
+.dw{padding:44px 60px}
+
+/* Метрики — flex-колонки для идеального выравнивания */
+.m4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:10px}
+
+.mc{
+  background:var(--g600);
+  border-radius:var(--r-md);
+  border:1px solid rgba(255,255,255,.04);
+  /* flex-column + justify-content: пространство между, чтобы всё выровнялось */
+  display:flex;flex-direction:column;
+  padding:22px 18px 20px;
+  position:relative;overflow:hidden;
+  transition:transform .3s cubic-bezier(.25,.46,.45,.94),box-shadow .3s;
+  cursor:default;
+}
+.mc::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 110% 70% at 0% 0%,rgba(89,102,128,.22),transparent 60%);opacity:0;transition:opacity .3s}
+.mc:hover::before{opacity:1}
+.mc:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,.28)}
+
+.mc-ey{font-family:var(--ft);font-size:9px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:rgba(255,255,255,.32);margin-bottom:12px}
+/* Числа и % — ОДИНАКОВЫЙ цвет через currentColor внутри .mc-n */
+.mc-n{font-family:var(--fd);font-weight:700;color:#fff;letter-spacing:-.04em;line-height:1;margin-bottom:2px;display:flex;align-items:baseline;gap:2px}
+.mc-big{font-size:2.4rem}
+.mc-pct{font-size:1.5rem}
+.mc-rule{height:1px;background:rgba(255,255,255,.08);margin:11px 0}
+.mc-desc{font-family:var(--ft);font-size:11px;color:rgba(255,255,255,.34);line-height:1.5;flex:1}
+.mc-tag{font-family:var(--ft);font-size:11px;font-weight:700;margin-top:8px}
+/* Все теги одного тона — светлый indigo */
+.mc-tag{color:#a8b5cc}
+
+.m3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.sc{background:var(--g50);border:1px solid var(--g100);border-radius:var(--r-md);padding:14px;text-align:center}
+.sc-n{font-family:var(--fd);font-size:20px;font-weight:700;letter-spacing:-.03em}
+.sc-l{font-family:var(--ft);font-size:11px;color:var(--g300);margin-top:3px;letter-spacing:-.005em}
+.sc-i{color:var(--ind)}.sc-b{color:var(--blue)}.sc-c{color:var(--citrus)}
+
+/* ════ EXPERIENCE ════ */
+.ew{padding:44px 60px}
+
+.job{padding:26px 0;border-bottom:1px solid var(--g50);position:relative}
+.job:first-child{padding-top:0}
+.job:last-child{border-bottom:none;padding-bottom:0}
+.job::before{content:'';position:absolute;left:-60px;top:0;bottom:0;width:3px;background:transparent;border-radius:0 2px 2px 0;transition:background .25s}
+.job:hover::before{background:var(--ind)}
+
+.jh{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:18px}
+.jbadge{display:inline-flex;align-items:center;gap:5px;font-family:var(--ft);font-size:10px;font-weight:700;padding:3px 10px;border-radius:100px;margin-bottom:9px;letter-spacing:.02em}
+.jb-live{background:var(--ind);color:white}
+.jb-prev{background:var(--g100);color:var(--g400)}
+.jb-proj{background:var(--blush-s);color:var(--blush);border:1px solid var(--blush-b)}
+.jctx{font-family:var(--ft);font-size:11px;color:var(--g300);margin-left:8px}
+.jt{font-family:var(--fd);font-size:19px;font-weight:700;color:var(--g600);letter-spacing:-.025em;line-height:1.2;margin-bottom:4px}
+.jco{font-family:var(--ft);font-size:13px;font-weight:600;letter-spacing:-.01em}
+.jco-i{color:var(--ind)}.jco-b{color:var(--blue)}.jco-r{color:var(--blush)}
+.jd{text-align:right;flex-shrink:0}
+.jd1{font-family:var(--ft);font-size:13px;font-weight:600;color:var(--g500);letter-spacing:-.015em}
+.jd2{font-family:var(--ft);font-size:11px;color:var(--g300);margin-top:3px}
+
+.bls{margin-bottom:17px}
+.bl{display:flex;gap:11px;font-family:var(--ft);font-size:14px;color:var(--g400);line-height:1.62;margin-bottom:10px;letter-spacing:-.015em}
+.bl:last-child{margin-bottom:0}
+.bd{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;flex-shrink:0;margin-top:3px}
+.bd-i{background:rgba(89,102,128,.10);color:var(--ind)}
+.bd-b{background:rgba(0,113,227,.08);color:var(--blue)}
+.bd-c{background:var(--citrus-s);color:var(--citrus)}
+.bd-r{background:var(--blush-s);color:var(--blush)}
+
+.jtags{display:flex;flex-wrap:wrap;gap:5px}
+.jt2{font-family:var(--ft);font-size:11px;font-weight:600;padding:4px 10px;border-radius:var(--r-xs);letter-spacing:-.005em;transition:all .18s;cursor:default}
+.jt2:hover{background:var(--ind)!important;color:white!important;border-color:transparent!important;transform:translateY(-1px);box-shadow:0 4px 12px rgba(89,102,128,.30)}
+.jt-i{background:var(--ind-s);color:var(--ind);border:1px solid var(--ind-b)}
+.jt-b{background:var(--blue-s);color:var(--blue);border:1px solid var(--blue-b)}
+.jt-c{background:var(--citrus-s);color:var(--citrus);border:1px solid var(--citrus-b)}
+.jt-r{background:var(--blush-s);color:var(--blush);border:1px solid var(--blush-b)}
+
+/* ════ SKILLS 2-col ════ */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.sk{padding:36px 40px}
+.sg{margin-bottom:22px}.sg:last-child{margin-bottom:0}
+.sgl{font-family:var(--ft);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g300);margin-bottom:10px;display:block}
+.sgs{display:flex;flex-wrap:wrap;gap:6px}
+.stag{font-family:var(--ft);font-size:12px;font-weight:600;padding:5px 11px;border-radius:var(--r-xs);transition:all .18s;cursor:default}
+.stag:hover{background:var(--ind)!important;color:white!important;border-color:transparent!important;transform:translateY(-1px);box-shadow:0 4px 12px rgba(89,102,128,.28)}
+.st-i{background:var(--ind-s);color:var(--ind);border:1px solid var(--ind-b)}
+.st-b{background:var(--blue-s);color:var(--blue);border:1px solid var(--blue-b)}
+.st-c{background:var(--citrus-s);color:var(--citrus);border:1px solid var(--citrus-b)}
+
+/* Meta-skills — единый indigo-акцент */
+.mw{padding:36px 40px}
+.msk{padding:15px 17px;border-radius:var(--r-md);border-left:3px solid var(--ind);margin-bottom:10px;background:var(--g50);transition:background .2s,box-shadow .2s}
+.msk:last-child{margin-bottom:0}
+.msk:hover{background:var(--white);box-shadow:var(--sh2)}
+.msk-t{font-family:var(--ft);font-size:13px;font-weight:700;color:var(--g600);margin-bottom:4px;letter-spacing:-.015em}
+.msk-d{font-family:var(--ft);font-size:12px;color:var(--g400);line-height:1.55;letter-spacing:-.01em}
+.msk-b{height:2px;background:var(--g100);border-radius:4px;margin-top:10px;overflow:hidden}
+.msk-f{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--ind),var(--ind-l))}
+
+/* ════ EDUCATION — строгое выравнивание через flex ════ */
+.eduw{padding:44px 60px}
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+
+.ecard{
+  /* flex-column: иконка → заголовок → subtitle → push → статус всегда внизу */
+  display:flex;flex-direction:column;
+  border-radius:var(--r-lg);padding:24px 22px;
+  position:relative;overflow:hidden;
+  transition:transform .28s cubic-bezier(.25,.46,.45,.94),box-shadow .28s;
+  cursor:default;
+  min-height:190px; /* фиксируем минимальную высоту */
+}
+.ecard:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,.22)}
+.ec1{background:linear-gradient(145deg,#1a1f2e 0%,#2e3642 100%)} /* indigo finish */
+.ec2{background:linear-gradient(145deg,#1d1d1f 0%,#2c2c2e 100%)} /* silver finish */
+.ec3{background:linear-gradient(145deg,#1d1d1f 0%,#2d2020 100%)} /* blush finish  */
+
+.ey-pill{position:absolute;top:13px;right:13px;font-family:var(--ft);font-size:10px;font-weight:700;padding:3px 9px;border-radius:100px;letter-spacing:.02em}
+.ep1{background:rgba(89,102,128,.30);color:#a8b5cc}
+.ep2{background:rgba(200,200,205,.18);color:#c8c8cc}
+.ep3{background:rgba(232,208,208,.20);color:#c8a8a8}
+
+.eicon{font-size:26px;margin-bottom:13px}
+.etit{font-family:var(--fd);font-size:13px;font-weight:700;color:#f5f5f7;margin-bottom:7px;line-height:1.4;letter-spacing:-.015em}
+.esub{font-family:var(--ft);font-size:11px;color:#6e6e73;line-height:1.5;
+  flex:1; /* занимает всё свободное пространство — статус всегда прижат к низу */
+  margin-bottom:12px}
+.estat{font-family:var(--ft);font-size:11px;font-weight:700;
+  margin-top:auto} /* прижат к низу */
+.es1{color:#a8b5cc}.es2{color:#c8c8cc}.es3{color:#c8a8a8}
+
+/* ════ FOOTER ════ */
+.ft{text-align:center;padding:36px 0 0}
+.fl{width:48px;height:1px;background:var(--g150);margin:0 auto 20px}
+.fn{font-family:var(--ft);font-size:13px;font-weight:600;color:var(--g400);letter-spacing:-.015em;margin-bottom:4px}
+.fs{font-family:var(--ft);font-size:12px;color:var(--g300);letter-spacing:-.01em}
+
+/* ════ RESPONSIVE ════ */
+@media(max-width:768px){
+  body{padding:0 12px 60px}
+  .topbar{margin-bottom:28px}
+  .hdr{grid-template-columns:1fr;padding:36px 28px 0;gap:28px}
+  .cc{align-items:flex-start}
+  .hstrip{padding:16px 28px 20px;gap:12px;margin-top:20px}
+  .vp{grid-template-columns:1fr;padding:32px 28px;gap:24px}
+  .dw{padding:32px 24px}
+  .m4{grid-template-columns:repeat(2,1fr)}
+  .ew{padding:32px 28px}
+  .job::before{left:-28px}
+  .jh{flex-direction:column;gap:6px}
+  .jd{text-align:left}
+  .two{grid-template-columns:1fr}
+  .sk,.mw{padding:28px 28px}
+  .eduw{padding:32px 28px}
+  .edu-grid{grid-template-columns:1fr;gap:10px}
+}
+@media print{
+  body{background:white;padding:0}
+  .topbar{display:none}
+  .card{box-shadow:none;border:1px solid #e5e5e5}
+  .mc,.ecard{box-shadow:none!important;transform:none!important}
+  .mc::before{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"></div>
+<div class="wrap">
+
+<!-- ═══ HEADER ═══ -->
+<header class="card section fi">
+<div class="hdr">
+  <div>
+    <span class="cv-ey">CV · 2026</span>
+    <div class="n1">Павел</div>
+    <div class="n2">Сайганов</div>
+    <div class="hl"></div>
+    <p class="tl">
+      Международное развитие бизнеса<br>
+      <strong>Управление рисками · GR-сопровождение</strong><br>
+      <em>Европа · Африка · Латинская Америка</em>
+    </p>
+    <p class="tq">"Be the change you want to see in the world."</p>
+  </div>
+  <div class="cc">
+    <div class="sb"><span class="pd"></span>Открыт к C-Level позициям</div>
+    <div class="cl">
+      <a href="mailto:pavel.sayganov@vk.com" class="ci">
+        <svg class="ico" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        pavel.sayganov@vk.com
+      </a>
+      <a href="https://t.me/paveletty" class="ci">
+        <svg class="ico" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.48 14.26l-2.95-.924c-.642-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.326.326z"/></svg>
+        @paveletty
+      </a>
+      <span class="ci">
+        <svg class="ico" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Удалённо
+      </span>
+    </div>
+  </div>
+</div>
+<div class="hstrip">
+  <span class="sl">Специализация</span>
+  <div class="chips">
+    <span class="chip ch-i">🌍 Международные рынки</span>
+    <span class="chip ch-b">🤝 B2B / G2B</span>
+    <span class="chip ch-c">📊 Управление рисками</span>
+    <span class="chip ch-r">🚀 Стратегия развития</span>
+  </div>
+</div>
+</header>
+
+<!-- ═══ 01 КТО Я ═══ -->
+<section class="card section fi a1">
+<div class="vp">
+  <div class="vp-t">
+    <span class="slbl">01 · Кто я</span>
+    <p>Эксперт по международному развитию бизнеса и маркетингу с <strong>12+ годами опыта</strong> на рынках Латинской Америки, Африки и России (программное обеспечение, добыча и обогащение полезных ископаемых, спорт, международные отношения).</p>
+    <p>Специализируюсь на развитии сложных продуктов на внешних рынках. Умею понятно транслировать комплексные смыслы и адаптировать продукты под культурный код локального рынка.</p>
+    <p>Организовывал мероприятия международного уровня (Форум «Россия–Африка», Чемпионат мира по футболу Россия-2018).</p>
+    <p>Свободно: <span class="hlt">португальский (C2), английский (C2), испанский (B2)</span>, русский (родной).</p>
+  </div>
+  <div>
+    <div class="markets">
+      <span class="mlbl">Ключевые рынки</span>
+      <div class="mi"><span class="flag">🇧🇷</span>Бразилия</div>
+      <div class="mi"><span class="flag">🇦🇴</span>Ангола</div>
+      <div class="mi"><span class="flag">🇵🇹</span>Португалия</div>
+      <div class="mi"><span class="flag">🇷🇺</span>Россия</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══ 02 ЧТО Я УМЕЮ ═══ -->
+<section class="card section fi a2">
+<div class="dw">
+  <span class="slbl">02 · Что я умею</span>
+  <div class="m4">
+
+    <div class="mc">
+      <div class="mc-ey">Эффективность работы</div>
+      <div class="mc-n"><span class="mc-big">+40</span><span class="mc-pct">%</span></div>
+      <div class="mc-rule"></div>
+      <div class="mc-desc">Ускорение операционной деятельности через AI-инструменты</div>
+      <div class="mc-tag">↑ Скорость выполнения</div>
+    </div>
+
+    <div class="mc">
+      <div class="mc-ey">Точность</div>
+      <div class="mc-n"><span class="mc-big">100</span><span class="mc-pct">%</span></div>
+      <div class="mc-rule"></div>
+      <div class="mc-desc">Редактура технической и юридической документации без ошибок</div>
+      <div class="mc-tag">✓ Гарантия качества</div>
+    </div>
+
+    <div class="mc">
+      <div class="mc-ey">Затраты ресурсов</div>
+      <div class="mc-n"><span class="mc-big">−30</span><span class="mc-pct">%</span></div>
+      <div class="mc-rule"></div>
+      <div class="mc-desc">Оптимизация бизнес-процессов и повышение качества</div>
+      <div class="mc-tag">↓ Сокращение издержек</div>
+    </div>
+
+    <div class="mc">
+      <div class="mc-ey">Мероприятия · Top Tier</div>
+      <div class="mc-n"><span class="mc-big" style="font-size:1.9rem">Top</span></div>
+      <div class="mc-rule"></div>
+      <div class="mc-desc">Организация форумов и конференций международного уровня</div>
+      <div class="mc-tag">✓ Кризисный менеджмент</div>
+    </div>
+
+  </div>
+  <div class="m3">
+    <div class="sc"><div class="sc-n sc-i">200+</div><div class="sc-l">Переговоров высокого уровня</div></div>
+    <div class="sc"><div class="sc-n sc-b">3</div><div class="sc-l">Языка на уровне C2/Native</div></div>
+    <div class="sc"><div class="sc-n sc-c">13+</div><div class="sc-l">Лет международного опыта</div></div>
+  </div>
+</div>
+</section>
+
+<!-- ═══ 03 ОПЫТ ═══ -->
+<section class="card section fi a3">
+<div class="ew">
+  <span class="slbl">03 · Опыт работы</span>
+
+  <!-- Битрикс24 -->
+  <div class="job">
+    <div class="jh">
+      <div>
+        <div><span class="jbadge jb-live">● Текущее место</span><span class="jctx">Развитие бизнеса</span></div>
+        <div class="jt">Региональный менеджер по стратегии и коммуникациям (Бразилия)</div>
+        <div class="jco jco-b">1С-Битрикс24</div>
+      </div>
+      <div class="jd"><div class="jd1">Январь 2025 — н.в.</div><div class="jd2">1 год 3 мес.</div></div>
+    </div>
+    <div class="bls">
+      <div class="bl"><span class="bd bd-i">→</span><span><strong>Стратегия развития:</strong> участие в разработке стратегии развития продукта на рынке Бразилии. Понимание циклов разработки и продажи цифровых сервисов.</span></div>
+      <div class="bl"><span class="bd bd-b">→</span><span><strong>Аналитика и мониторинг:</strong> внедрение AI-инструментов для операционной деятельности и мониторинга достижения целей бизнеса.</span></div>
+      <div class="bl"><span class="bd bd-c">→</span><span><strong>Отчётность и презентации:</strong> подготовка регулярных отчётов, презентаций и предложений.</span></div>
+      <div class="bl"><span class="bd bd-r">→</span><span><strong>Продукт:</strong> анализ жизненного цикла и конкурентной среды для корректировки планов продаж и рыночной стратегии.</span></div>
+    </div>
+    <div class="jtags">
+      <span class="jt2 jt-i">Технологические продукты</span>
+      <span class="jt2 jt-b">Рыночная стратегия</span>
+      <span class="jt2 jt-i">Аналитика</span>
+      <span class="jt2 jt-c">Отчётность</span>
+    </div>
+  </div>
+
+  <!-- Catoca -->
+  <div class="job">
+    <div class="jh">
+      <div>
+        <div><span class="jbadge jb-prev">2019–2025</span><span class="jctx">Ангола · Поддержка топ-менеджмента</span></div>
+        <div class="jt">Руководитель исполнительного офиса (при CFO)</div>
+        <div class="jco jco-b">Catoca Mining Company (Ангола)</div>
+      </div>
+      <div class="jd"><div class="jd1">Авг. 2019 — Янв. 2025</div><div class="jd2">5 лет 5 мес.</div></div>
+    </div>
+    <div class="bls">
+      <div class="bl"><span class="bd bd-r">→</span><span><strong>Контроль контрагентов:</strong> обеспечение контроля, мониторинга и управления рисками в работе с контрагентами курируемых направлений.</span></div>
+      <div class="bl"><span class="bd bd-i">→</span><span><strong>Участие в переговорах высшего уровня:</strong> государство, акционеры, международные организации.</span></div>
+      <div class="bl"><span class="bd bd-b">→</span><span><strong>Аналитика и планирование:</strong> подготовка аналитических отчётов. Анализ социально-экономического положения региона.</span></div>
+      <div class="bl"><span class="bd bd-c">→</span><span><strong>Контроль качества:</strong> повышение качества предоставляемых сервисов (документооборот, переводы, логистика) через оптимизацию внутренних процессов.</span></div>
+    </div>
+    <div class="jtags">
+      <span class="jt2 jt-b">Executive Comms</span>
+      <span class="jt2 jt-r">Risk Control</span>
+      <span class="jt2 jt-i">GR &amp; Дипломатия</span>
+      <span class="jt2 jt-c">Strategic Analysis</span>
+      <span class="jt2 jt-b">Operational Mgmt</span>
+    </div>
+  </div>
+
+  <!-- Международные проекты -->
+  <div class="job">
+    <div class="jh">
+      <div>
+        <div><span class="jbadge jb-proj">13+ лет · Проектная деятельность</span></div>
+        <div class="jt">Международные проекты и Протокол</div>
+        <div class="jco jco-r">Независимые проекты · Африка, Латам, Европа</div>
+      </div>
+      <div class="jd"><div class="jd1">Окт. 2012 — н.в.</div><div class="jd2">13 лет 6 мес.</div></div>
+    </div>
+    <div class="bls">
+      <div class="bl"><span class="bd bd-i">→</span><span><strong>Чемпионат мира по футболу Россия-2018 · Сборная Португалии:</strong> операционное сопровождение, координация, решение нестандартных задач. Оптимизация бюджета на 20%.</span></div>
+      <div class="bl"><span class="bd bd-b">→</span><span><strong>Организация мероприятий:</strong> подготовка и проведение форумов, выставок, конференций. Работа с российскими и зарубежными государственными органами.</span></div>
+      <div class="bl"><span class="bd bd-c">→</span><span><strong>Встречи «под ключ»:</strong> логистика, протокол, программа для партнёров из Африки и Латинской Америки.</span></div>
+    </div>
+    <div class="jtags">
+      <span class="jt2 jt-r">Коммуникация со СМИ</span>
+      <span class="jt2 jt-b">Синхронный перевод</span>
+      <span class="jt2 jt-i">Протокол</span>
+      <span class="jt2 jt-c">Организация мероприятий</span>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══ 04–05 НАВЫКИ ═══ -->
+<div class="two fi a4">
+  <section class="card">
+  <div class="sk">
+    <span class="slbl">04 · Навыки и языки</span>
+    <div class="sg">
+      <span class="sgl">Языки</span>
+      <div class="sgs">
+        <span class="stag st-i">Английский C2</span>
+        <span class="stag st-i">Португальский C2</span>
+        <span class="stag st-i">Испанский B2</span>
+        <span class="stag st-i">Русский (родной)</span>
+      </div>
+    </div>
+    <div class="sg">
+      <span class="sgl">Экспертные навыки</span>
+      <div class="sgs">
+        <span class="stag st-b">Синхронный перевод</span>
+        <span class="stag st-b">Визиты высокого уровня</span>
+        <span class="stag st-b">Дипломатический протокол</span>
+        <span class="stag st-b">Business Intelligence</span>
+      </div>
+    </div>
+    <div class="sg">
+      <span class="sgl">Инструменты</span>
+      <div class="sgs">
+        <span class="stag st-c">ИИ-ассистированная разработка</span>
+        <span class="stag st-c">Автоматизация</span>
+        <span class="stag st-c">Кросс-культурный этикет</span>
+        <span class="stag st-c">Конфиденциальность</span>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="card">
+  <div class="mw">
+    <span class="slbl">05 · Мета-навыки</span>
+    <div class="msk">
+      <div class="msk-t">Финансовая грамотность (ROI)</div>
+      <div class="msk-d">Понимание бизнес-метрик. Работа ради прибыли, а не ради процесса.</div>
+      <div class="msk-b"><div class="msk-f" style="width:88%"></div></div>
+    </div>
+    <div class="msk">
+      <div class="msk-t">Стратегическое партнёрство</div>
+      <div class="msk-d">Выстраивание диалога с C-Level и госструктурами. Перевод технических смыслов на язык бизнеса.</div>
+      <div class="msk-b"><div class="msk-f" style="width:93%"></div></div>
+    </div>
+    <div class="msk">
+      <div class="msk-t">Работа с первыми лицами</div>
+      <div class="msk-d">VIP-делегации на крупнейших мероприятиях. Лично знаком с Криштиану Роналду.</div>
+      <div class="msk-b"><div class="msk-f" style="width:98%"></div></div>
+    </div>
+    <div class="msk">
+      <div class="msk-t">Понимание специфики Африки</div>
+      <div class="msk-d">Глубокое знание бизнес-среды Анголы (право, налоги, менталитет).</div>
+      <div class="msk-b"><div class="msk-f" style="width:94%"></div></div>
+    </div>
+  </div>
+  </section>
+</div>
+
+<!-- ═══ 06 ОБРАЗОВАНИЕ ═══ -->
+<section class="card section fi a5">
+<div class="eduw">
+  <span class="slbl">06 · Образование и сертификации</span>
+  <div class="edu-grid">
+
+    <div class="ecard ec1">
+      <div class="ey-pill ep1">2023–2025</div>
+      <div class="eicon">🎓</div>
+      <div class="etit">Директор по экономике и финансам (CFO)</div>
+      <div class="esub">Eduson Academy · Профессиональная переподготовка</div>
+      <div class="estat es1">✓ Завершено</div>
+    </div>
+
+    <div class="ecard ec2">
+      <div class="ey-pill ep2">2014</div>
+      <div class="eicon">🎓</div>
+      <div class="etit">Московский государственный лингвистический университет</div>
+      <div class="esub">Лингвистика и переводоведение · Диплом специалиста</div>
+      <div class="estat es2">✓ Завершено</div>
+    </div>
+
+    <div class="ecard ec3">
+      <div class="ey-pill ep3">2013–2014</div>
+      <div class="eicon">🌐</div>
+      <div class="etit">Международные коммуникации</div>
+      <div class="esub">Universidade do Minho, Португалия</div>
+      <div class="estat es3">✓ Завершено</div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ft fi a6">
+  <div class="fl"></div>
+  <p class="fn">Павел Сайганов · 2026</p>
+  <p class="fs">Международное развитие бизнеса · Управление проектами · Ангола · Бразилия · Португалия</p>
+</footer>
+
+</div>
+</body>
+</html>
