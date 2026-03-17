@@ -8,29 +8,37 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{font-size:16px;-webkit-text-size-adjust:100%}
+html{font-size:106.25%;-webkit-text-size-adjust:100%;quotes:"“" "”"}
+html:lang(cs),html:lang(de){quotes:"„" "“"}
 body{
-  font-family:'Manrope',-apple-system,BlinkMacSystemFont,sans-serif;
-  font-weight:400;color:#1C2333;background-color:#EEF2F7;
-  background-image:
-    radial-gradient(ellipse 90% 60% at 15% -5%,rgba(99,102,241,.10) 0%,transparent 55%),
-    radial-gradient(ellipse 70% 50% at 85% 105%,rgba(20,184,166,.09) 0%,transparent 55%),
-    radial-gradient(circle at 1px 1px,rgba(148,163,184,.35) 1px,transparent 0);
-  background-size:100% 100%,100% 100%,26px 26px;
-  min-height:100vh;padding:48px 16px 64px
+  position:relative;
+  min-width:320px;
+  min-height:100vh;
+  padding:48px 16px 64px;
+  font-size:17px;
+  line-height:1.4705882353;
+  font-weight:400;
+  letter-spacing:-0.022em;
+  font-family:"SF Pro Text","SF Pro Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
+  -moz-font-feature-settings:"kern";
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  background-color:rgb(255,255,255);
+  color:rgb(29,29,31);
+  font-style:normal
 }
 :root{
-  --ind:#6366F1;--ind-d:#4F46E5;--ind-s:rgba(99,102,241,.10);
-  --teal:#14B8A6;--teal-s:rgba(20,184,166,.10);
-  --vio-s:rgba(124,58,237,.09);--amb-s:rgba(217,119,6,.09);
-  --s5:#64748B;--s6:#475569;--s7:#334155;--s9:#0F172A;
-  --glass:rgba(255,255,255,.62);--gb:rgba(255,255,255,.88);
+  --ind:rgb(0,113,227);--ind-d:rgb(0,102,204);--ind-s:rgba(0,113,227,.10);
+  --teal:rgb(3,161,14);--teal-s:rgba(3,161,14,.10);
+  --vio-s:rgba(0,0,0,.06);--amb-s:rgba(245,99,0,.10);
+  --s5:rgb(134,134,139);--s6:rgb(110,110,115);--s7:rgb(66,66,69);--s9:rgb(29,29,31);
+  --glass:rgba(232,232,237,.72);--gb:rgba(255,255,255,.8);
   --r-xl:24px;--r-lg:18px;--r-md:12px;--r-sm:8px;
-  --sh-c:0 2px 16px rgba(15,23,42,.07),0 1px 4px rgba(15,23,42,.04);
-  --sh-lg:0 8px 32px rgba(15,23,42,.10),0 2px 8px rgba(15,23,42,.06)
+  --sh-c:0 2px 16px rgba(0,0,0,.08),0 1px 4px rgba(0,0,0,.04);
+  --sh-lg:0 8px 32px rgba(0,0,0,.08),0 2px 8px rgba(0,0,0,.06)
 }
 .wrap{max-width:960px;margin:0 auto}
-.glass{background:var(--glass);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid var(--gb);border-radius:var(--r-xl);box-shadow:var(--sh-lg)}
+.glass{background:var(--glass);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);border:1px solid var(--gb);border-radius:var(--r-xl);box-shadow:var(--sh-lg)}
 .section{margin-bottom:18px}
 @keyframes rise{from{opacity:0;transform:translateY(30px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
 .rise{animation:rise .72s cubic-bezier(.22,.68,0,1.05) both}
