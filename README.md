@@ -15,8 +15,8 @@ python3 -m http.server 8000
 
 ## Важно проверить в GitHub (один раз)
 1. **Settings → Pages**
-2. **Build and deployment → Source: GitHub Actions** (если ещё не включено, workflow теперь пытается включить Pages автоматически через `enablement: true`)
-3. Убедиться, что рабочая ветка — `main` или `master` (workflow запускается на push в обе ветки)
+2. **Build and deployment → Source: GitHub Actions**
+3. Убедиться, что дефолтная ветка репозитория — `main` (workflow запускается на push в `main`)
 4. После пуша открыть вкладку **Actions** и дождаться зелёного статуса `Deploy static site to GitHub Pages`.
 
 После этого сайт должен открываться по Pages-URL репозитория.
