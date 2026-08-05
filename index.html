@@ -4,329 +4,437 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Павел Сайганов — System Analyst / Technical Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,450;14..32,650;14..32,750;14..32,780;14..32,800;14..32,850&display=swap" rel="stylesheet">
 <style>
-/* ── RESET & BASE ── */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{font-size:16px;-webkit-text-size-adjust:100%}
-
-:root{
-  --fd:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  --ft:"SF Pro Text",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+/* ── AUGUST TOKENS & RESET ── */
+:root {
+  /* Colors */
+  --ink: #171927;
+  --muted: #697084;
+  --canvas: #F7F8FC;
+  --surface: #FFFFFF;
+  --soft: #F4F5FA;
+  --accent: #6E5CF6;
+  --accent-dark: #5140DC;
+  --growth: #D7FF61;
+  --navy: #15172A;
+  --navy-muted: #BEC3D4;
   
-  --bg-main: #f5f5f7;
-  --card-bg: rgba(255, 255, 255, 0.82);
-  --card-border: rgba(0, 0, 0, 0.08);
+  /* Borders & Shadows */
+  --border-light: rgba(28, 31, 49, 0.11);
+  --border-dark: rgba(255, 255, 255, 0.10);
+  --shadow-hover: 0 14px 34px rgba(27, 30, 48, 0.08);
   
-  --txt-main: #1d1d1f;
-  --txt-sub: #515154;
-  --txt-muted: #86868b;
+  /* Typography */
+  --font-sans: "Inter", "Inter Variable", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   
-  --accent-blue: #0071e3;
-  --accent-indigo: #4a576e;
-  --accent-green: #166534;
-  
-  --r-sm: 10px;
-  --r-md: 16px;
-  --r-lg: 24px;
-  
-  --sh-card: 0 4px 24px rgba(0, 0, 0, 0.04);
+  /* Spacing Scale (4px foundation) */
+  --s-2: 2px; --s-4: 4px; --s-6: 6px; --s-8: 8px; --s-10: 10px; --s-12: 12px; --s-14: 14px; 
+  --s-16: 16px; --s-20: 20px; --s-24: 24px; --s-28: 28px; --s-32: 32px; --s-42: 42px; --s-48: 48px; --s-64: 64px;
 }
 
-body{
-  font-family:var(--ft);
-  color:var(--txt-main);
-  background:#f0f2f5;
-  line-height:1.6;
-  padding:40px 20px 80px;
-  -webkit-font-smoothing:antialiased;
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.wrap{max-width:920px;margin:0 auto}
-
-/* ── CARD ── */
-.card{
-  background:var(--card-bg);
-  backdrop-filter:blur(20px);
-  -webkit-backdrop-filter:blur(20px);
-  border:1px solid var(--card-border);
-  border-radius:var(--r-lg);
-  box-shadow:var(--sh-card);
-  padding:40px;
-  margin-bottom:24px;
+body {
+  background-color: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-optical-sizing: auto;
+  font-synthesis: none;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.65;
+  padding: var(--s-42) var(--s-24) var(--s-64);
 }
 
-/* ── HEADER ── */
-.hdr{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
-.hdr-main h1{font-family:var(--fd);font-size:38px;font-weight:700;letter-spacing:-0.03em;line-height:1.1}
-.hdr-main .role{font-size:19px;font-weight:600;color:var(--accent-indigo);margin-top:6px}
-.hdr-main .subrole{font-size:14px;color:var(--txt-sub);margin-top:4px}
-
-.contacts{display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--txt-sub);text-align:right}
-.contacts a{color:var(--accent-blue);text-decoration:none}
-.contacts a:hover{text-decoration:underline}
-
-/* ── SECTION TITLES ── */
-.stitle{
-  font-family:var(--fd);
-  font-size:13px;
-  font-weight:700;
-  letter-spacing:0.12em;
-  text-transform:uppercase;
-  color:var(--txt-muted);
-  margin-bottom:20px;
-  display:block;
-  border-bottom:1px solid rgba(0,0,0,0.06);
-  padding-bottom:8px;
+a {
+  color: var(--accent-dark);
+  text-decoration: none;
+  transition: color 160ms cubic-bezier(.2,.8,.2,1);
 }
 
-/* ── ABOUT & APPROACH ── */
-.summary-text{font-size:15px;color:var(--txt-sub);line-height:1.7}
-.summary-text p{margin-bottom:12px}
-.summary-text p:last-child{margin-bottom:0}
-.summary-text strong{color:var(--txt-main);font-weight:600}
-
-.approach-box{
-  background:rgba(74, 87, 110, 0.05);
-  border-left:4px solid var(--accent-indigo);
-  border-radius:var(--r-sm);
-  padding:16px 20px;
-  margin-top:16px;
-  font-size:14px;
-  color:var(--txt-main);
+a:hover {
+  color: var(--accent);
 }
-.approach-box h4{font-size:14px;font-weight:700;margin-bottom:6px;color:var(--accent-indigo)}
 
-/* ── EXPERIENCE ── */
-.job{margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid rgba(0,0,0,0.06)}
-.job:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+/* ── TYPOGRAPHY ── */
+.text-micro { font-size: 9px; font-weight: 850; line-height: 1.35; letter-spacing: 0.09em; text-transform: uppercase; }
+.text-label { font-size: 10px; font-weight: 800; line-height: 1.4; letter-spacing: 0.10em; text-transform: uppercase; }
+.text-caption { font-size: 11px; font-weight: 650; line-height: 1.5; }
+.text-body-small { font-size: 12px; font-weight: 450; line-height: 1.55; }
+.text-body { font-size: 14px; font-weight: 450; line-height: 1.65; }
+.text-lead { font-size: 16px; font-weight: 450; line-height: 1.65; }
+.text-h4 { font-size: 18px; font-weight: 750; line-height: 1.25; letter-spacing: -0.025em; }
+.text-h3 { font-size: 22px; font-weight: 780; line-height: 1.15; letter-spacing: -0.035em; }
+.text-h2 { font-size: clamp(30px, 4vw, 48px); font-weight: 820; line-height: 1.02; letter-spacing: -0.05em; }
+.text-display { font-size: clamp(32px, 5vw, 62px); font-weight: 850; line-height: 0.98; letter-spacing: -0.055em; }
 
-.job-hdr{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:12px;flex-wrap:wrap}
-.job-title{font-size:18px;font-weight:700;color:var(--txt-main)}
-.job-company{font-size:15px;font-weight:600;color:var(--accent-indigo)}
-.job-date{font-size:13px;font-weight:500;color:var(--txt-muted);text-align:right}
+/* ── LAYOUT & BENTO GRID ── */
+.workspace {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-24);
+}
 
-.job-desc{font-size:14px;color:var(--txt-sub);margin-bottom:12px}
-.job-bullets{list-style:none;padding:0}
-.job-bullets li{position:relative;padding-left:18px;font-size:14px;color:var(--txt-sub);margin-bottom:8px;line-height:1.6}
-.job-bullets li::before{content:"•";position:absolute;left:0;top:0;color:var(--accent-indigo);font-weight:bold}
-.job-bullets li strong{color:var(--txt-main)}
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--s-24);
+}
 
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
-.tag{font-size:12px;font-weight:600;padding:4px 10px;border-radius:6px;background:rgba(0,0,0,0.04);color:var(--txt-sub)}
-.tag-tech{background:rgba(0, 113, 227, 0.08);color:var(--accent-blue)}
+.col-8 { grid-column: span 8; display: flex; flex-direction: column; gap: var(--s-24); }
+.col-4 { grid-column: span 4; display: flex; flex-direction: column; gap: var(--s-24); }
 
-/* ── SKILLS MATRIX ── */
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:20px}
-.skill-group h4{font-size:14px;font-weight:700;color:var(--txt-main);margin-bottom:10px}
-.skill-list{display:flex;flex-wrap:wrap;gap:6px}
+/* ── COMPONENTS ── */
+.hero-anchor {
+  background: linear-gradient(145deg, var(--navy) 0%, #1c1f33 100%);
+  color: var(--surface);
+  border-radius: 30px;
+  padding: var(--s-48);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-16);
+  box-shadow: 0 24px 60px rgba(28, 31, 49, 0.15);
+}
 
-/* ── EDUCATION ── */
-.edu-item{margin-bottom:16px}
-.edu-item:last-child{margin-bottom:0}
-.edu-title{font-size:15px;font-weight:700;color:var(--txt-main)}
-.edu-sub{font-size:13px;color:var(--txt-sub)}
-.edu-date{font-size:12px;color:var(--txt-muted)}
+.hero-anchor .hero-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: var(--s-24);
+  margin-top: var(--s-24);
+}
 
-@media(max-width:640px){
-  body{padding:16px 10px 40px}
-  .card{padding:24px 20px}
-  .hdr{flex-direction:column}
-  .contacts{text-align:left}
-  .job-hdr{flex-direction:column}
-  .job-date{text-align:left}
+.hero-anchor .contact-list {
+  display: flex;
+  gap: var(--s-24);
+  color: var(--navy-muted);
+}
+
+.hero-anchor a { color: var(--surface); text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3); }
+.hero-anchor a:hover { color: var(--growth); text-decoration-color: var(--growth); }
+
+.highlight-growth { color: var(--growth); }
+
+.panel {
+  background-color: var(--surface);
+  border-radius: 24px;
+  border: 1px solid var(--border-light);
+  padding: var(--s-32);
+  transition: transform 160ms cubic-bezier(.2,.8,.2,1), box-shadow 160ms;
+}
+
+.panel:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.panel-header {
+  margin-bottom: var(--s-24);
+  color: var(--ink);
+}
+
+.coach-card {
+  background-color: #EEEAFF; /* Light purple guidance surface */
+  border-radius: 18px;
+  padding: var(--s-20);
+  margin-bottom: var(--s-24);
+  border: 1px solid rgba(110, 92, 246, 0.1);
+}
+.coach-card p { color: var(--ink); }
+.coach-card strong { color: var(--accent-dark); font-weight: 750; }
+
+.job-item {
+  margin-bottom: var(--s-32);
+  padding-bottom: var(--s-32);
+  border-bottom: 1px solid var(--border-light);
+}
+.job-item:last-child {
+  margin-bottom: 0; padding-bottom: 0; border-bottom: none;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--s-12);
+  flex-wrap: wrap;
+  gap: var(--s-8);
+}
+
+.job-role { color: var(--ink); }
+.job-company { color: var(--muted); margin-top: var(--s-4); }
+.job-date { color: var(--muted); text-align: right; }
+
+.job-desc {
+  color: var(--ink);
+  margin-bottom: var(--s-16);
+}
+
+.job-bullets {
+  list-style: none;
+  padding-left: var(--s-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-8);
+}
+.job-bullets li {
+  position: relative;
+  padding-left: var(--s-16);
+  color: var(--muted);
+}
+.job-bullets li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 800;
+}
+.job-bullets li strong { color: var(--ink); font-weight: 650; }
+
+.pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-8);
+  margin-top: var(--s-16);
+}
+
+.pill {
+  background-color: var(--soft);
+  color: var(--muted);
+  border: 1px solid var(--border-light);
+  border-radius: 999px;
+  padding: var(--s-6) var(--s-12);
+  font-size: 11px;
+  font-weight: 650;
+}
+.pill.accent {
+  background-color: #F0EEFF;
+  color: var(--accent-dark);
+  border-color: rgba(110, 92, 246, 0.2);
+}
+
+.edu-item { margin-bottom: var(--s-20); }
+.edu-item:last-child { margin-bottom: 0; }
+.edu-title { color: var(--ink); margin-bottom: var(--s-4); }
+.edu-sub { color: var(--muted); margin-bottom: var(--s-4); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+  body { padding: var(--s-28) var(--s-20) var(--s-48); }
+}
+
+@media (max-width: 780px) {
+  .bento-grid { display: flex; flex-direction: column; }
+  .hero-anchor { padding: var(--s-32) var(--s-24); border-radius: 26px; }
+  .panel { padding: var(--s-24); border-radius: 20px; }
+  .hero-anchor .contact-list { flex-direction: column; gap: var(--s-8); }
+  .job-header { flex-direction: column; }
+  .job-date { text-align: left; }
 }
 </style>
 </head>
 <body>
 
-<div class="wrap">
+<div class="workspace">
 
-  <!-- HEADER -->
-  <header class="card">
-    <div class="hdr">
-      <div class="hdr-main">
-        <h1>Павел Сайганов</h1>
-        <div class="role">System Analyst / Technical Analyst</div>
-        <div class="subrole">Проектирование систем · Сбор и формализация требований · AI-Assisted Prototyping</div>
+  <!-- 1. HERO / DARK ANCHOR -->
+  <header class="hero-anchor">
+    <div class="text-label highlight-growth">Available for opportunities</div>
+    <h1 class="text-display">Павел Сайганов</h1>
+    <h2 class="text-h3 highlight-growth">System Analyst / Technical Analyst</h2>
+    
+    <div class="hero-meta">
+      <div class="text-body" style="color: var(--navy-muted); max-width: 600px;">
+        Проектирование систем · Сбор и формализация требований · AI-Assisted Prototyping
       </div>
-      <div class="contacts">
-        <div>Москва (Удалённый формат)</div>
-        <div>Email: <a href="mailto:pavel.sayganov@vk.com">pavel.sayganov@vk.com</a></div>
-        <div>Telegram: <a href="https://t.me/paveletty">@paveletty</a></div>
+      <div class="contact-list text-body-small">
+        <span>Москва (Удалённый формат)</span>
+        <a href="mailto:pavel.sayganov@vk.com">pavel.sayganov@vk.com</a>
+        <a href="https://t.me/paveletty" target="_blank">@paveletty</a>
       </div>
     </div>
   </header>
 
-  <!-- О СЕБЕ И ПОДХОД -->
-  <section class="card">
-    <span class="stitle">Профессиональный профиль & Подход</span>
-    <div class="summary-text">
-      <p>
-        <strong>Системный аналитик на стыке бизнеса и технологий.</strong> Обладаю глубоким пониманием бизнес-контекста и процессов end-to-end, что позволяет переводить неформализованные запросы стейкхолдеров в точные технические спецификации, сценарии интеграций и архитектурные постановки для R&D-команд.
-      </p>
-      
-      <div class="approach-box">
-        <h4>Концептуальный подход: «Аналитик → Solution Architect через AI»</h4>
-        Использование современных ИИ-инструментов (LLM, Copilot, авто-ревью кода) позволяет мне снизить традиционный технический барьер. Я не просто описываю «как должна работать система», но и самостоятельно моделирую и валидирую технические решения: генерирую рабочий прототип API/скрипта, проверяю интеграции, анализирую структуры баз данных и выявляю узкие места архитектуры за дни, а не месяцы.
-      </div>
-    </div>
-  </section>
-
-  <!-- ОПЫТ РАБОТЫ -->
-  <section class="card">
-    <span class="stitle">Опыт работы</span>
-
-    <!-- Bitrix24 -->
-    <div class="job">
-      <div class="job-hdr">
-        <div>
-          <div class="job-title">Бизнес и Системный аналитик (Бразильский регион)</div>
-          <div class="job-company">1С-Битрикс24</div>
-        </div>
-        <div class="job-date">Январь 2025 — по настоящее время</div>
-      </div>
-      <div class="job-desc">
-        Анализ продуктовых требований и адаптация SaaS-платформы под специфику целевого рынка. Формирование ТЗ и интеграционных спецификаций.
-      </div>
-      <ul class="job-bullets">
-        <li><strong>Сбор и формализация требований:</strong> Сбор требований от региональных стейкхолдеров, трансляция бизнес-целей в функциональные и нефункциональные требования для продуктов R&D.</li>
-        <li><strong>Моделирование процессов:</strong> Описание процессов AS-IS / TO-BE, проектирование пользовательских сценариев (Use Cases, User Stories) и интерфейсных цепочек.</li>
-        <li><strong>AI-Assisted аналитика:</strong> Внедрение ИИ-инструментов для автоматизации обработки обратной связи, мониторинга продуктовых метрик и прототипирования гипотез.</li>
-        <li><strong>Синхронизация команд:</strong> Устранение разрыва между бизнес-целями международной экспансии и технической реализацией в кодовой базе.</li>
-      </ul>
-      <div class="tags">
-        <span class="tag tag-tech">SaaS Analysis</span>
-        <span class="tag tag-tech">Requirements Spec (BRD/SRS)</span>
-        <span class="tag">BPMN</span>
-        <span class="tag">Use Cases</span>
-        <span class="tag tag-tech">AI Tools</span>
-      </div>
-    </div>
-
-    <!-- Catoca Mining Company -->
-    <div class="job">
-      <div class="job-hdr">
-        <div>
-          <div class="job-title">Руководитель исполнительного офиса / Старший аналитик процессов</div>
-          <div class="job-company">Catoca Mining Company (ГК АЛРОСА / Ангола)</div>
-        </div>
-        <div class="job-date">Август 2019 — Январь 2025 (5 лет 6 месяцев)</div>
-      </div>
-      <div class="job-desc">
-        Управление кросс-функциональными проектами, системный анализ корпоративных процессов при CFO компании.
-      </div>
-      <ul class="job-bullets">
-        <li><strong>Оптимизация enterprise-процессов:</strong> Провёл системный аудит внутренних сервисов и регламентов компании, выявил узкие места и спроектировал целевые схемы процессов, что снизило операционные издержки.</li>
-        <li><strong>Постановка задач разработки:</strong> Формировал технические задания для IT-подразделения на автоматизацию документооборота, логистики и финансовых согласований.</li>
-        <li><strong>Управление рисковыми сценариями:</strong> Разработал модели контроля взаимодействия с контрагентами и матрицы регламентации процессов для минимизации рисков.</li>
-        <li><strong>Работа с C-Level:</strong> Подготовка аналитических материалов, архитектурных отчётов и экономических обоснований внедрения систем для совета директоров и акционеров.</li>
-      </ul>
-      <div class="tags">
-        <span class="tag">Enterprise Process Analysis</span>
-        <span class="tag">Risk Management</span>
-        <span class="tag">Stakeholder Management</span>
-        <span class="tag">AS-IS / TO-BE</span>
-        <span class="tag">C-Level Reporting</span>
-      </div>
-    </div>
-
-    <!-- R&D и Технические Проекты -->
-    <div class="job">
-      <div class="job-hdr">
-        <div>
-          <div class="job-title">Системный аналитик / Проектировщик (AI & FinTech R&D)</div>
-          <div class="job-company">Проектная деятельность (Hermes, Pulse)</div>
-        </div>
-        <div class="job-date">2024 — 2026</div>
-      </div>
-      <div class="job-desc">
-        Практическая реализация концепции «Analyst → Architect via AI»: самостоятельное моделирование систем, интеграций и прототипирование.
-      </div>
-      <ul class="job-bullets">
-        <li><strong>Проектирование Финтех-платформы (Pulse):</strong> Разработал архитектурный концепт и пользовательские сценарии для минималистичного цифрового банка, включая структуры данных и интерфейсные потоки.</li>
-        <li><strong>AI-Assisted прототипирование (Hermes):</strong> Конфигурирование локального AI-агента, написание Python-скриптов для взаимодействия с REST API, траблшутинг замкнутых циклов API и интеграция OCR-модулей распознавания изображений.</li>
-        <li><strong>Проектирование API и интеграций:</strong> Описание REST API эндпоинтов, форматов JSON/XML запросов и ответов для межсистемного взаимодействия.</li>
-      </ul>
-      <div class="tags">
-        <span class="tag tag-tech">Python (Basics & Automation)</span>
-        <span class="tag tag-tech">REST API / Postman</span>
-        <span class="tag tag-tech">LLM Integration & Prompting</span>
-        <span class="tag tag-tech">OCR Pipeline</span>
-        <span class="tag tag-tech">System Design</span>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- НАВЫКИ И ИНСТРУМЕНТЫ -->
-  <section class="card">
-    <span class="stitle">Навыки и Технический стек</span>
-    <div class="skills-grid">
-      
-      <div class="skill-group">
-        <h4>Системный & Бизнес-анализ</h4>
-        <div class="skill-list">
-          <span class="tag tag-tech">Сбор & Спецификация требований</span>
-          <span class="tag">BRD / SRS / FRS</span>
-          <span class="tag">BPMN 2.0 / UML</span>
-          <span class="tag">Use Cases & User Stories</span>
-          <span class="tag">Проектирование REST API</span>
-          <span class="tag">C-Level Коммуникация</span>
-        </div>
-      </div>
-
-      <div class="skill-group">
-        <h4>Технологии & AI-Tools</h4>
-        <div class="skill-list">
-          <span class="tag tag-tech">AI-Assisted Prototyping</span>
-          <span class="tag tag-tech">ChatGPT / GitHub Copilot</span>
-          <span class="tag">Python (скрипты, API)</span>
-          <span class="tag">JSON / XML / SQL (базовый)</span>
-          <span class="tag">Postman / Swagger</span>
-          <span class="tag">Architecture Patterns (Microservices, Event-Driven)</span>
-        </div>
-      </div>
-
-      <div class="skill-group">
-        <h4>Языковые компетенции</h4>
-        <div class="skill-list">
-          <span class="tag">Английский (C2 — Свободный)</span>
-          <span class="tag">Португальский (C2 — Свободный)</span>
-          <span class="tag">Испанский (B2 — Рабочий)</span>
-          <span class="tag">Русский (Родной)</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ОБРАЗОВАНИЕ -->
-  <section class="card">
-    <span class="stitle">Образование и Повышение квалификации</span>
+  <!-- 2. BENTO GRID WORKSPACE -->
+  <main class="bento-grid">
     
-    <div class="edu-item">
-      <div class="edu-title">Директор по экономике и финансам (CFO)</div>
-      <div class="edu-sub">Академия Eduson — Финансовый анализ, управление рисками и бизнес-метрики</div>
-      <div class="edu-date">2023 — 2025</div>
+    <!-- LEFT COLUMN (Primary Content) -->
+    <div class="col-8">
+      
+      <!-- ABOUT -->
+      <section class="panel">
+        <h3 class="text-h3 panel-header">Профессиональный профиль</h3>
+        <p class="text-body" style="margin-bottom: var(--s-20);">
+          Системный аналитик на стыке бизнеса и технологий. Обладаю глубоким пониманием бизнес-контекста и процессов end-to-end, что позволяет переводить неформализованные запросы стейкхолдеров в точные технические спецификации, сценарии интеграций и архитектурные постановки для R&D-команд.
+        </p>
+        
+        <div class="coach-card">
+          <p class="text-body-small">
+            <strong>Концептуальный подход: «Аналитик → Solution Architect через AI»</strong><br>
+            Использование современных ИИ-инструментов (LLM, Copilot) позволяет мне снизить традиционный технический барьер. Я самостоятельно моделирую и валидирую технические решения: генерирую рабочий прототип API/скрипта, проверяю интеграции, анализирую структуры баз данных и выявляю узкие места архитектуры за дни, а не месяцы.
+          </p>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="panel">
+        <h3 class="text-h3 panel-header">Опыт работы</h3>
+
+        <!-- Job 1 -->
+        <div class="job-item">
+          <div class="job-header">
+            <div>
+              <div class="text-h4 job-role">Бизнес и Системный аналитик (Бразильский регион)</div>
+              <div class="text-body-small job-company">1С-Битрикс24</div>
+            </div>
+            <div class="text-body-small job-date">Январь 2025 — по настоящее время</div>
+          </div>
+          <div class="text-body job-desc">
+            Анализ продуктовых требований и адаптация SaaS-платформы под специфику целевого рынка.
+          </div>
+          <ul class="job-bullets text-body-small">
+            <li><strong>Сбор и формализация требований:</strong> Трансляция бизнес-целей в функциональные/нефункциональные требования.</li>
+            <li><strong>Моделирование процессов:</strong> Описание процессов AS-IS / TO-BE, проектирование Use Cases и User Stories.</li>
+            <li><strong>AI-Assisted аналитика:</strong> Внедрение ИИ-инструментов для обработки обратной связи и прототипирования.</li>
+            <li><strong>Синхронизация команд:</strong> Устранение разрыва между бизнес-целями экспансии и технической реализацией.</li>
+          </ul>
+          <div class="pill-group">
+            <span class="pill accent">SaaS Analysis</span>
+            <span class="pill accent">BRD/SRS</span>
+            <span class="pill">BPMN</span>
+            <span class="pill">Use Cases</span>
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="job-item">
+          <div class="job-header">
+            <div>
+              <div class="text-h4 job-role">Руководитель офиса / Старший аналитик процессов</div>
+              <div class="text-body-small job-company">Catoca Mining Company (ГК АЛРОСА / Ангола)</div>
+            </div>
+            <div class="text-body-small job-date">Авг 2019 — Янв 2025</div>
+          </div>
+          <div class="text-body job-desc">
+            Управление кросс-функциональными проектами, системный анализ корпоративных процессов при CFO компании.
+          </div>
+          <ul class="job-bullets text-body-small">
+            <li><strong>Оптимизация процессов:</strong> Системный аудит внутренних сервисов, снижение операционных издержек.</li>
+            <li><strong>Постановка задач:</strong> Формирование ТЗ для IT на автоматизацию документооборота и финансов.</li>
+            <li><strong>Риски и регламенты:</strong> Модели контроля взаимодействия с контрагентами и матрицы регламентации.</li>
+            <li><strong>Работа с C-Level:</strong> Подготовка архитектурных отчётов и экономических обоснований.</li>
+          </ul>
+          <div class="pill-group">
+            <span class="pill">Enterprise Analysis</span>
+            <span class="pill">Risk Management</span>
+            <span class="pill">AS-IS / TO-BE</span>
+            <span class="pill">C-Level Reporting</span>
+          </div>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="job-item">
+          <div class="job-header">
+            <div>
+              <div class="text-h4 job-role">Системный аналитик / Проектировщик (R&D)</div>
+              <div class="text-body-small job-company">Проекты Hermes, Pulse</div>
+            </div>
+            <div class="text-body-small job-date">2024 — 2026</div>
+          </div>
+          <div class="text-body job-desc">
+            Практическая реализация концепции «Analyst → Architect via AI»: моделирование систем и прототипирование.
+          </div>
+          <ul class="job-bullets text-body-small">
+            <li><strong>Финтех-платформа (Pulse):</strong> Разработка архитектурного концепта и UX-сценариев для цифрового банка.</li>
+            <li><strong>AI-прототипирование (Hermes):</strong> Конфигурация локального AI-агента, Python-скрипты для REST API, OCR.</li>
+            <li><strong>Интеграции:</strong> Описание REST API эндпоинтов, форматов JSON/XML для межсистемного взаимодействия.</li>
+          </ul>
+          <div class="pill-group">
+            <span class="pill accent">Python</span>
+            <span class="pill accent">REST API</span>
+            <span class="pill accent">LLM Integration</span>
+            <span class="pill">System Design</span>
+          </div>
+        </div>
+
+      </section>
     </div>
-    
-    <div style="height: 12px;"></div>
 
-    <div class="edu-item">
-      <div class="edu-title">Лингвистика и межкультурная коммуникация</div>
-      <div class="edu-sub">Московский государственный лингвистический университет (МГЛУ)</div>
-      <div class="edu-date">2014</div>
+    <!-- RIGHT COLUMN (Secondary Content) -->
+    <div class="col-4">
+      
+      <!-- SKILLS -->
+      <section class="panel">
+        <h3 class="text-h3 panel-header">Компетенции</h3>
+        
+        <div style="margin-bottom: var(--s-20);">
+          <div class="text-label" style="color: var(--muted); margin-bottom: var(--s-8);">Анализ и Проектирование</div>
+          <div class="pill-group" style="margin-top: 0;">
+            <span class="pill accent">BRD / SRS / FRS</span>
+            <span class="pill accent">REST API Design</span>
+            <span class="pill">BPMN 2.0</span>
+            <span class="pill">Use Cases / User Stories</span>
+            <span class="pill">Сбор требований</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: var(--s-20);">
+          <div class="text-label" style="color: var(--muted); margin-bottom: var(--s-8);">Технологии & AI</div>
+          <div class="pill-group" style="margin-top: 0;">
+            <span class="pill accent">AI-Assisted Prototyping</span>
+            <span class="pill">ChatGPT / Copilot</span>
+            <span class="pill">Python</span>
+            <span class="pill">JSON / XML / SQL</span>
+            <span class="pill">Postman / Swagger</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="text-label" style="color: var(--muted); margin-bottom: var(--s-8);">Языки</div>
+          <div class="pill-group" style="margin-top: 0;">
+            <span class="pill">Английский (C2)</span>
+            <span class="pill">Португальский (C2)</span>
+            <span class="pill">Испанский (B2)</span>
+            <span class="pill">Русский (Родной)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="panel">
+        <h3 class="text-h3 panel-header">Образование</h3>
+        
+        <div class="edu-item">
+          <div class="text-body edu-title">Директор по экономике и финансам (CFO)</div>
+          <div class="text-body-small edu-sub">Академия Eduson</div>
+          <div class="text-caption" style="color: var(--muted);">2023 — 2025</div>
+        </div>
+        
+        <div class="edu-item">
+          <div class="text-body edu-title">Лингвистика и межкультурная коммуникация</div>
+          <div class="text-body-small edu-sub">МГЛУ</div>
+          <div class="text-caption" style="color: var(--muted);">2014</div>
+        </div>
+
+        <div class="edu-item">
+          <div class="text-body edu-title">Международная коммуникация</div>
+          <div class="text-body-small edu-sub">Universidade do Minho (Португалия)</div>
+          <div class="text-caption" style="color: var(--muted);">2013 — 2014</div>
+        </div>
+      </section>
+
     </div>
-
-    <div style="height: 12px;"></div>
-
-    <div class="edu-item">
-      <div class="edu-title">Международная коммуникация</div>
-      <div class="edu-sub">Universidade do Minho (Португалия)</div>
-      <div class="edu-date">2013 — 2014</div>
-    </div>
-  </section>
-
+  </main>
 </div>
 
 </body>
