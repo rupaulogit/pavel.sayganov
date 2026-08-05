@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light">
-<title>Павел Сайганов — CV 2026</title>
+<title>Павел Сайганов — System Analyst 2026</title>
 <style>
 /* ── RESET & BASE ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -48,7 +48,7 @@ html{font-size:17px;-webkit-text-size-adjust:100%}
 
   /* Radii & Fluid Dynamics */
   --r-xs:8px; --r-sm:12px; --r-md:18px; --r-lg:24px; --r-xl:32px;
-  --ease-apple: cubic-bezier(0.25, 1, 0.5, 1); /* Snappier 120Hz curve */
+  --ease-apple: cubic-bezier(0.25, 1, 0.5, 1);
 
   /* Spatial Shadows */
   --sh-panel: 0 30px 60px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.02);
@@ -80,16 +80,12 @@ body{
 
 /* ── Glassmorphism 2.0 Base Card ── */
 .card{
-  /* Specular Highlight Gradient */
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.25) 100%);
   backdrop-filter: blur(32px) saturate(150%);
   -webkit-backdrop-filter: blur(32px) saturate(150%);
-  
-  /* Physical Edge Lighting */
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-bottom-color: rgba(255, 255, 255, 0.15);
   border-right-color: rgba(255, 255, 255, 0.15);
-  
   border-radius: var(--r-xl);
   box-shadow: var(--card-glow), var(--sh-panel);
   overflow:hidden;
@@ -115,7 +111,7 @@ body{
 .n1{font-family:var(--fd);font-weight:700;letter-spacing:-.045em;line-height:.9;font-size:clamp(54px,8vw,86px);color:var(--g600)}
 .n2{font-family:var(--fd);font-weight:700;letter-spacing:-.045em;line-height:.9;font-size:clamp(54px,8vw,86px);color:var(--ind);margin-bottom:32px}
 .hl{width:50px;height:1px;background:rgba(0,0,0,0.06);margin:28px 0}
-.tl{font-family:var(--ft);font-size:16px;font-weight:400;color:var(--g400);line-height:1.6;max-width:400px;letter-spacing:-.015em}
+.tl{font-family:var(--ft);font-size:16px;font-weight:400;color:var(--g400);line-height:1.6;max-width:440px;letter-spacing:-.015em}
 .tl strong{color:var(--g500);font-weight:600}
 .tl em{color:var(--ind);font-style:normal;font-weight:600}
 .tq{margin-top:24px;font-family:var(--ft);font-size:13px;font-style:italic;color:var(--g300);max-width:340px}
@@ -144,7 +140,7 @@ body{
 .slbl{font-family:var(--ft);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--g300);margin-bottom:28px;display:block}
 
 /* ════ VALUE PROP ════ */
-.vp{display:grid;grid-template-columns:1fr 210px;gap:52px;padding:52px 60px}
+.vp{display:grid;grid-template-columns:1fr 240px;gap:52px;padding:52px 60px}
 .vp-t p{font-family:var(--ft);font-size:16px;color:var(--g400);line-height:1.7;margin-bottom:16px;letter-spacing:-.015em}
 .vp-t p:last-child{margin-bottom:0}
 .vp-t strong{color:var(--g500);font-weight:600}
@@ -154,7 +150,7 @@ body{
 .mlbl{font-family:var(--ft);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g300);margin-bottom:18px;display:block}
 .mi{display:flex;align-items:center;gap:12px;font-family:var(--ft);font-size:14px;color:var(--g500);font-weight:600;margin-bottom:12px;letter-spacing:-.01em}
 .mi:last-child{margin-bottom:0}
-.flag{width:30px;height:30px;background:rgba(255,255,255,0.7);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;box-shadow:var(--sh-panel);border:1px solid rgba(0,0,0,0.04)}
+.flag{width:30px;height:30px;background:rgba(255,255,255,0.7);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;box-shadow:var(--sh-panel);border:1px solid rgba(0,0,0,0.04);color:var(--ind)}
 
 /* ════ DASHBOARD (Dark Obsidian Glass) ════ */
 .dw{padding:52px 60px}
@@ -164,11 +160,9 @@ body{
   background: linear-gradient(135deg, rgba(30,30,32,0.75) 0%, rgba(20,20,22,0.9) 100%);
   backdrop-filter: blur(32px) saturate(180%);
   -webkit-backdrop-filter: blur(32px) saturate(180%);
-  
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-bottom-color: rgba(255, 255, 255, 0.05);
   border-right-color: rgba(255, 255, 255, 0.05);
-  
   border-radius:var(--r-md);
   display:flex;flex-direction:column;
   padding:24px 20px;
@@ -183,17 +177,11 @@ body{
 
 .mc-ey{font-family:var(--ft);font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:14px}
 .mc-n{font-family:var(--fd);font-weight:700;color:#fff;letter-spacing:-.04em;line-height:1;margin-bottom:4px;display:flex;align-items:baseline;gap:2px}
-.mc-big{font-size:2.5rem}
+.mc-big{font-size:2rem}
 .mc-pct{font-size:1.5rem}
 .mc-rule{height:1px;background:rgba(255,255,255,.08);margin:12px 0}
 .mc-desc{font-family:var(--ft);font-size:12px;color:rgba(255,255,255,0.55);line-height:1.5;flex:1}
 .mc-tag{font-family:var(--ft);font-size:11px;font-weight:700;margin-top:10px;color:#a8b5cc;letter-spacing:-0.01em}
-
-.m3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.sc{background:rgba(255,255,255,0.4);border:1px solid rgba(0,0,0,0.03);border-radius:var(--r-md);padding:18px;text-align:center;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
-.sc-n{font-family:var(--fd);font-size:22px;font-weight:700;letter-spacing:-.03em}
-.sc-l{font-family:var(--ft);font-size:12px;color:var(--g400);margin-top:4px}
-.sc-i{color:var(--ind)}.sc-b{color:var(--blue)}.sc-c{color:var(--citrus)}
 
 /* ════ EXPERIENCE ════ */
 .ew{padding:52px 60px}
@@ -231,7 +219,6 @@ body{
 .jt-b{background:var(--blue-s);color:var(--blue);border:1px solid var(--blue-b)}
 .jt-c{background:var(--citrus-s);color:var(--citrus);border:1px solid var(--citrus-b)}
 .jt-r{background:var(--blush-s);color:var(--blush);border:1px solid var(--blush-b)}
-/* Override on hover */
 .jtags .jt2:hover{background:var(--ind);color:white;border-color:transparent;transform:translateY(-2px);box-shadow:0 6px 16px rgba(74,87,110,0.25)}
 
 /* ════ SKILLS & META ════ */
@@ -244,7 +231,6 @@ body{
 .st-i{background:var(--ind-s);color:var(--ind);border:1px solid var(--ind-b)}
 .st-b{background:var(--blue-s);color:var(--blue);border:1px solid var(--blue-b)}
 .st-c{background:var(--citrus-s);color:var(--citrus);border:1px solid var(--citrus-b)}
-/* Override on hover */
 .sgs .stag:hover{background:var(--ind);color:white;border-color:transparent;transform:translateY(-2px) scale(1.02);box-shadow:0 6px 16px rgba(74,87,110,0.25)}
 
 /* Meta-skills */
@@ -257,7 +243,7 @@ body{
 .msk-b{height:3px;background:rgba(0,0,0,0.05);border-radius:4px;margin-top:12px;overflow:hidden}
 .msk-f{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--ind),var(--ind-l))}
 
-/* ════ EDUCATION (Obsidian Multi-tonal Glass) ════ */
+/* ════ EDUCATION ════ */
 .eduw{padding:52px 60px}
 .edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 
@@ -271,15 +257,12 @@ body{
   min-height:210px;
   backdrop-filter: blur(32px) saturate(180%);
   -webkit-backdrop-filter: blur(32px) saturate(180%);
-  
-  /* Shared dark glass borders */
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-bottom-color: rgba(255, 255, 255, 0.05);
   border-right-color: rgba(255, 255, 255, 0.05);
 }
 .ecard:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 30px 60px rgba(0,0,0,0.28);border-top-color:rgba(255,255,255,0.25)}
 
-/* Tinted Dark Glasses */
 .ec1{background:linear-gradient(145deg, rgba(35,42,60,0.8) 0%, rgba(20,24,34,0.9) 100%)} 
 .ec2{background:linear-gradient(145deg, rgba(38,38,40,0.8) 0%, rgba(22,22,24,0.9) 100%)} 
 .ec3{background:linear-gradient(145deg, rgba(42,30,30,0.8) 0%, rgba(24,18,18,0.9) 100%)} 
@@ -335,6 +318,7 @@ body{
 <div class="topbar"></div>
 <div class="wrap">
 
+<!-- ═══ HEADER ═══ -->
 <header class="card section fi">
 <div class="hdr">
   <div>
@@ -343,14 +327,13 @@ body{
     <div class="n2">Сайганов</div>
     <div class="hl"></div>
     <p class="tl">
-      Международное развитие бизнеса<br>
-      <strong>Управление рисками · GR-сопровождение</strong><br>
-      <em>Европа · Африка · Латинская Америка</em>
+      <strong>Системный аналитик · Технический мост бизнеса и R&D</strong><br>
+      <em>AI-Assisted прототипирование · Архитектура решений</em>
     </p>
-    <p class="tq">"Be the change you want to see in the world."</p>
+    <p class="tq">"Аналитик понимает «зачем», а не только «как»."</p>
   </div>
   <div class="cc">
-    <div class="sb"><span class="pd"></span>Открыт к C-Level позициям</div>
+    <div class="sb"><span class="pd"></span>Path: System Analyst → Architect</div>
     <div class="cl">
       <a href="mailto:pavel.sayganov@vk.com" class="ci">
         <svg class="ico" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -370,185 +353,182 @@ body{
 <div class="hstrip">
   <span class="sl">Специализация</span>
   <div class="chips">
-    <span class="chip ch-i">🌍 Международные рынки</span>
-    <span class="chip ch-b">🤝 B2B / G2B</span>
-    <span class="chip ch-c">📊 Управление рисками</span>
-    <span class="chip ch-r">🚀 Стратегия развития</span>
+    <span class="chip ch-i">🧠 Системное мышление</span>
+    <span class="chip ch-b">🤖 AI-Assisted Prototyping</span>
+    <span class="chip ch-c">⚙️ Системные интеграции</span>
+    <span class="chip ch-r">🗣 Бизнес-контекст</span>
   </div>
 </div>
 </header>
 
+<!-- ═══ 01 КТО Я ═══ -->
 <section class="card section fi a1">
 <div class="vp">
   <div class="vp-t">
-    <span class="slbl">01 · Кто я</span>
-    <p>Эксперт по международному развитию бизнеса и маркетингу с <strong>12+ годами опыта</strong> на рынках Латинской Америки, Африки и России (программное обеспечение, добыча и обогащение полезных ископаемых, спорт, международные отношения).</p>
-    <p>Специализируюсь на развитии сложных продуктов на внешних рынках. Умею понятно транслировать комплексные смыслы и адаптировать продукты под культурный код локального рынка.</p>
-    <p>Организовывал мероприятия международного уровня (Форум «Россия–Африка», Чемпионат мира по футболу Россия-2018).</p>
-    <p>Свободно: <span class="hlt">португальский (C2), английский (C2), испанский (B2)</span>, русский (родной).</p>
+    <span class="slbl">01 · Концепция и фокус</span>
+    <p>Я — системный аналитик с сильным бизнес-бэкграундом, работающий на стыке потребностей бизнеса и технической архитектуры.</p>
+    <p>Мой подход основан на интеграции <strong>AI-ассистентов</strong> в процесс проектирования. Нейросети снижают технический барьер: мне не нужно 5 лет писать код, чтобы сгенерировать прототип через Copilot, провести профилирование решения, оценить интеграцию API или спроектировать микросервисную архитектуру.</p>
+    <p>Я перевожу требования стейкхолдеров на технический язык, сохраняя главное — понимание <span class="hlt">«зачем мы это делаем»</span>, минимизируя когнитивные искажения и слепую генерацию без бизнес-смысла.</p>
   </div>
   <div>
     <div class="markets">
-      <span class="mlbl">Ключевые рынки</span>
-      <div class="mi"><span class="flag">🇧🇷</span>Бразилия</div>
-      <div class="mi"><span class="flag">🇦🇴</span>Ангола</div>
-      <div class="mi"><span class="flag">🇵🇹</span>Португалия</div>
-      <div class="mi"><span class="flag">🇷🇺</span>Россия</div>
+      <span class="mlbl">Ключевой стек</span>
+      <div class="mi"><span class="flag">⚡️</span>Python / API</div>
+      <div class="mi"><span class="flag">🤖</span>LLM (Copilot, GPT)</div>
+      <div class="mi"><span class="flag">🏗</span>Microservices</div>
+      <div class="mi"><span class="flag">📊</span>BPMN / UML</div>
     </div>
   </div>
 </div>
 </section>
 
+<!-- ═══ 02 ЧТО Я УМЕЮ (DASHBOARD) ═══ -->
 <section class="card section fi a2">
 <div class="dw">
-  <span class="slbl">02 · Что я умею</span>
+  <span class="slbl">02 · Вектор развития (Аналитик → Архитектор)</span>
   <div class="m4">
 
     <div class="mc">
-      <div class="mc-ey">Эффективность работы</div>
-      <div class="mc-n"><span class="mc-big">+40</span><span class="mc-pct">%</span></div>
+      <div class="mc-ey">Скорость проверки</div>
+      <div class="mc-n"><span class="mc-big" style="font-size:1.6rem">Дни</span><span class="mc-pct">, а не годы</span></div>
       <div class="mc-rule"></div>
-      <div class="mc-desc">Ускорение операционной деятельности через AI-инструменты</div>
-      <div class="mc-tag">↑ Скорость выполнения</div>
+      <div class="mc-desc">Быстрое прототипирование и валидация архитектуры через AI</div>
+      <div class="mc-tag">↑ Time-to-market</div>
     </div>
 
     <div class="mc">
-      <div class="mc-ey">Точность</div>
-      <div class="mc-n"><span class="mc-big">100</span><span class="mc-pct">%</span></div>
+      <div class="mc-ey">Бизнес-контекст</div>
+      <div class="mc-n"><span class="mc-big">End</span><span class="mc-pct">-to-end</span></div>
       <div class="mc-rule"></div>
-      <div class="mc-desc">Редактура технической и юридической документации без ошибок</div>
-      <div class="mc-tag">✓ Гарантия качества</div>
+      <div class="mc-desc">Понимание взаимосвязей процессов и потребностей стейкхолдеров</div>
+      <div class="mc-tag">✓ Системное мышление</div>
     </div>
 
     <div class="mc">
-      <div class="mc-ey">Затраты ресурсов</div>
-      <div class="mc-n"><span class="mc-big">−30</span><span class="mc-pct">%</span></div>
+      <div class="mc-ey">Роль в команде</div>
+      <div class="mc-n"><span class="mc-big" style="font-size:1.7rem">Переводчик</span></div>
       <div class="mc-rule"></div>
-      <div class="mc-desc">Оптимизация бизнес-процессов и повышение качества</div>
-      <div class="mc-tag">↓ Сокращение издержек</div>
+      <div class="mc-desc">Синхронизация бизнес-целей с техническими решениями R&D</div>
+      <div class="mc-tag">↔ Коммуникация</div>
     </div>
 
     <div class="mc">
-      <div class="mc-ey">Мероприятия · Top Tier</div>
-      <div class="mc-n"><span class="mc-big" style="font-size:1.9rem">Высший уровень</span></div>
+      <div class="mc-ey">Тех. архитектура</div>
+      <div class="mc-n"><span class="mc-big" style="font-size:1.5rem">Паттерны</span></div>
       <div class="mc-rule"></div>
-      <div class="mc-desc">Организация форумов и конференций международного уровня</div>
-      <div class="mc-tag">✓ Кризисный менеджмент</div>
+      <div class="mc-desc">Обоснованный выбор решений (Event-driven, CQRS, микросервисы)</div>
+      <div class="mc-tag">⚙️ Масштабируемость</div>
     </div>
 
-  </div>
-  <div class="m3">
-    <div class="sc"><div class="sc-n sc-i">200+</div><div class="sc-l">Переговоров высокого уровня</div></div>
-    <div class="sc"><div class="sc-n sc-b">3</div><div class="sc-l">Языка на уровне C2/Native</div></div>
-    <div class="sc"><div class="sc-n sc-c">13+</div><div class="sc-l">Лет международного опыта</div></div>
   </div>
 </div>
 </section>
 
+<!-- ═══ 03 ОПЫТ ═══ -->
 <section class="card section fi a3">
 <div class="ew">
-  <span class="slbl">03 · Опыт работы</span>
+  <span class="slbl">03 · Технический и бизнес-опыт</span>
 
+  <!-- Тех. Проекты (AI & FinTech) -->
+  <div class="job">
+    <div class="jh">
+      <div>
+        <div><span class="jbadge jb-live">● R&D Практика</span><span class="jctx">Технический барьер преодолён</span></div>
+        <div class="jt">Системный аналитик / Проектировщик (AI & FinTech)</div>
+        <div class="jco jco-b">Локальные проекты (Hermes, Pulse)</div>
+      </div>
+      <div class="jd"><div class="jd1">Проектная деятельность</div><div class="jd2">Практика</div></div>
+    </div>
+    <div class="bls">
+      <div class="bl"><span class="bd bd-i">→</span><span><strong>Проектирование финтех-архитектуры:</strong> разработка структурных схем, концептов интерфейсов и pitch-фреймворков для минималистичного банковского приложения (проект Pulse).</span></div>
+      <div class="bl"><span class="bd bd-b">→</span><span><strong>AI-ассистенты и автоматизация:</strong> развёртывание и конфигурация локальной среды автоматизированного AI-помощника (проект Hermes). Траблшутинг системных циклов (API loops).</span></div>
+      <div class="bl"><span class="bd bd-c">→</span><span><strong>Интеграции:</strong> настройка модулей распознавания текста (OCR) на базе Python-скриптов. Использование ИИ-инструментов для ревью и генерации кода.</span></div>
+    </div>
+    <div class="jtags">
+      <span class="jt2 jt-b">Python</span>
+      <span class="jt2 jt-i">API Integration</span>
+      <span class="jt2 jt-c">OCR & LLMs</span>
+      <span class="jt2 jt-r">FinTech UI/UX</span>
+      <span class="jt2 jt-b">System Design</span>
+    </div>
+  </div>
+
+  <!-- Битрикс24 -->
   <div class="job">
     <div class="jh">
       <div>
         <div><span class="jbadge jb-live">● Текущее место</span><span class="jctx">Развитие бизнеса</span></div>
-        <div class="jt">Региональный менеджер по стратегии и коммуникациям (Бразилия)</div>
+        <div class="jt">Региональный менеджер по стратегии (Бразилия)</div>
         <div class="jco jco-b">1С-Битрикс24</div>
       </div>
       <div class="jd"><div class="jd1">Январь 2025 — н.в.</div><div class="jd2">1 год 3 мес.</div></div>
     </div>
     <div class="bls">
-      <div class="bl"><span class="bd bd-i">→</span><span><strong>Стратегия развития:</strong> участие в разработке стратегии развития продукта на рынке Бразилии. Понимание циклов разработки и продажи цифровых сервисов.</span></div>
-      <div class="bl"><span class="bd bd-b">→</span><span><strong>Аналитика и мониторинг:</strong> внедрение AI-инструментов для операционной деятельности и мониторинга достижения целей бизнеса.</span></div>
-      <div class="bl"><span class="bd bd-c">→</span><span><strong>Отчётность и презентации:</strong> подготовка регулярных отчётов, презентаций и предложений.</span></div>
-      <div class="bl"><span class="bd bd-r">→</span><span><strong>Продукт:</strong> анализ жизненного цикла и конкурентной среды для корректировки планов продаж и рыночной стратегии.</span></div>
+      <div class="bl"><span class="bd bd-i">→</span><span><strong>Аналитика цифрового продукта:</strong> участие в разработке стратегии развития технологического продукта на рынке Бразилии. Мониторинг жизненного цикла ПО.</span></div>
+      <div class="bl"><span class="bd bd-b">→</span><span><strong>Внедрение AI:</strong> использование AI-инструментов для мониторинга операционной деятельности, автоматизации процессов и анализа конкурентной среды.</span></div>
+      <div class="bl"><span class="bd bd-c">→</span><span><strong>Синтез требований:</strong> преобразование бизнес-метрик в понятные R&D-команде задачи и гипотезы.</span></div>
     </div>
     <div class="jtags">
-      <span class="jt2 jt-i">Технологические продукты</span>
-      <span class="jt2 jt-b">Рыночная стратегия</span>
-      <span class="jt2 jt-i">Аналитика</span>
-      <span class="jt2 jt-c">Отчётность</span>
+      <span class="jt2 jt-i">SaaS</span>
+      <span class="jt2 jt-b">Продуктовая аналитика</span>
+      <span class="jt2 jt-c">Бизнес-метрики</span>
     </div>
   </div>
 
+  <!-- Catoca -->
   <div class="job">
     <div class="jh">
       <div>
-        <div><span class="jbadge jb-prev">2019–2025</span><span class="jctx">Ангола · Поддержка топ-менеджмента</span></div>
+        <div><span class="jbadge jb-prev">2019–2025</span><span class="jctx">Enterprise Business Analysis</span></div>
         <div class="jt">Руководитель исполнительного офиса (при CFO)</div>
-        <div class="jco jco-b">Catoca Mining Company (Ангола)</div>
+        <div class="jco jco-r">Catoca Mining Company (Ангола)</div>
       </div>
       <div class="jd"><div class="jd1">Авг. 2019 — Янв. 2025</div><div class="jd2">5 лет 5 мес.</div></div>
     </div>
     <div class="bls">
-      <div class="bl"><span class="bd bd-r">→</span><span><strong>Контроль контрагентов:</strong> обеспечение контроля, мониторинга и управления рисками в работе с контрагентами курируемых направлений.</span></div>
-      <div class="bl"><span class="bd bd-i">→</span><span><strong>Участие в переговорах высшего уровня:</strong> государство, акционеры, международные организации.</span></div>
-      <div class="bl"><span class="bd bd-b">→</span><span><strong>Аналитика и планирование:</strong> подготовка аналитических отчётов. Анализ социально-экономического положения региона.</span></div>
-      <div class="bl"><span class="bd bd-c">→</span><span><strong>Контроль качества:</strong> повышение качества предоставляемых сервисов (документооборот, переводы, логистика) через оптимизацию внутренних процессов.</span></div>
+      <div class="bl"><span class="bd bd-r">→</span><span><strong>Оптимизация Enterprise-процессов:</strong> аудит и повышение качества работы внутренних сервисов (документооборот, логистика).</span></div>
+      <div class="bl"><span class="bd bd-i">→</span><span><strong>Управление рисками:</strong> контроль взаимодействия с контрагентами, обеспечение прозрачности процессов и минимизация операционных рисков.</span></div>
+      <div class="bl"><span class="bd bd-c">→</span><span><strong>Работа со стейкхолдерами:</strong> подготовка аналитических отчётов для C-Level, согласование требований между государством, акционерами и подрядчиками.</span></div>
     </div>
     <div class="jtags">
-      <span class="jt2 jt-b">Executive Comms</span>
-      <span class="jt2 jt-r">Risk Control</span>
-      <span class="jt2 jt-i">GR &amp; Дипломатия</span>
-      <span class="jt2 jt-c">Strategic Analysis</span>
-      <span class="jt2 jt-b">Operational Mgmt</span>
-    </div>
-  </div>
-
-  <div class="job">
-    <div class="jh">
-      <div>
-        <div><span class="jbadge jb-proj">13+ лет · Проектная деятельность</span></div>
-        <div class="jt">Международные проекты и Протокол</div>
-        <div class="jco jco-r">Независимые проекты · Африка, Латам, Европа</div>
-      </div>
-      <div class="jd"><div class="jd1">Окт. 2012 — н.в.</div><div class="jd2">13 лет 6 мес.</div></div>
-    </div>
-    <div class="bls">
-      <div class="bl"><span class="bd bd-i">→</span><span><strong>Чемпионат мира по футболу Россия-2018 · Сборная Португалии:</strong> операционное сопровождение, координация, решение нестандартных задач. Оптимизация бюджета на 20%.</span></div>
-      <div class="bl"><span class="bd bd-b">→</span><span><strong>Организация мероприятий:</strong> подготовка и проведение форумов, выставок, конференций. Работа с российскими и зарубежными государственными органами.</span></div>
-      <div class="bl"><span class="bd bd-c">→</span><span><strong>Встречи «под ключ»:</strong> логистика, протокол, программа для партнёров из Африки и Латинской Америки.</span></div>
-    </div>
-    <div class="jtags">
-      <span class="jt2 jt-r">Коммуникация со СМИ</span>
-      <span class="jt2 jt-b">Синхронный перевод</span>
-      <span class="jt2 jt-i">Протокол</span>
-      <span class="jt2 jt-c">Организация мероприятий</span>
+      <span class="jt2 jt-r">Risk Management</span>
+      <span class="jt2 jt-i">Business Analysis</span>
+      <span class="jt2 jt-c">Stakeholder Mgmt</span>
+      <span class="jt2 jt-b">Process Optimization</span>
     </div>
   </div>
 </div>
 </section>
 
+<!-- ═══ 04–05 НАВЫКИ ═══ -->
 <div class="two fi a4">
   <section class="card">
   <div class="sk">
-    <span class="slbl">04 · Навыки и языки</span>
+    <span class="slbl">04 · Технологии и Инструменты</span>
     <div class="sg">
-      <span class="sgl">Языки</span>
+      <span class="sgl">Системный анализ & Архитектура</span>
       <div class="sgs">
-        <span class="stag st-i">Английский C2</span>
-        <span class="stag st-i">Португальский C2</span>
-        <span class="stag st-i">Испанский B2</span>
-        <span class="stag st-i">Русский (родной)</span>
+        <span class="stag st-i">Сбор требований (End-to-End)</span>
+        <span class="stag st-i">Microservices / Event-Driven</span>
+        <span class="stag st-i">Интеграция API</span>
+        <span class="stag st-i">Прототипирование решений</span>
       </div>
     </div>
     <div class="sg">
-      <span class="sgl">Экспертные навыки</span>
+      <span class="sgl">AI & Разработка</span>
       <div class="sgs">
-        <span class="stag st-b">Синхронный перевод</span>
-        <span class="stag st-b">Визиты высокого уровня</span>
-        <span class="stag st-b">Дипломатический протокол</span>
-        <span class="stag st-b">Business Intelligence</span>
+        <span class="stag st-b">Prompt Engineering</span>
+        <span class="stag st-b">Генерация кода (Copilot, GPT)</span>
+        <span class="stag st-b">Основы Python</span>
+        <span class="stag st-b">AI Code Review</span>
       </div>
     </div>
     <div class="sg">
-      <span class="sgl">Инструменты</span>
+      <span class="sgl">Языки (Business & Tech Comms)</span>
       <div class="sgs">
-        <span class="stag st-c">ИИ-ассистированная разработка</span>
-        <span class="stag st-c">Автоматизация</span>
-        <span class="stag st-c">Кросс-культурный этикет</span>
-        <span class="stag st-c">Конфиденциальность</span>
+        <span class="stag st-c">Английский C2</span>
+        <span class="stag st-c">Португальский C2</span>
+        <span class="stag st-c">Испанский B2</span>
       </div>
     </div>
   </div>
@@ -556,41 +536,42 @@ body{
 
   <section class="card">
   <div class="mw">
-    <span class="slbl">05 · Мета-навыки</span>
+    <span class="slbl">05 · Мета-компетенции</span>
     <div class="msk">
-      <div class="msk-t">Финансовая грамотность (ROI)</div>
-      <div class="msk-d">Понимание бизнес-метрик. Работа ради прибыли, а не ради процесса.</div>
-      <div class="msk-b"><div class="msk-f" style="width:88%"></div></div>
+      <div class="msk-t">Бизнес-контекст («Зачем», а не «Как»)</div>
+      <div class="msk-d">ИИ может сгенерировать код, но не понимает бизнес-смысла. Я обеспечиваю связь технического решения с финансовой эффективностью.</div>
+      <div class="msk-b"><div class="msk-f" style="width:96%"></div></div>
     </div>
     <div class="msk">
-      <div class="msk-t">Стратегическое партнёрство</div>
-      <div class="msk-d">Выстраивание диалога с C-Level и госструктурами. Перевод технических смыслов на язык бизнеса.</div>
-      <div class="msk-b"><div class="msk-f" style="width:93%"></div></div>
+      <div class="msk-t">Защита от ИИ-искажений</div>
+      <div class="msk-d">Сохраняю критическое мышление при работе с LLM, не допуская слепого копирования без фундаментального понимания.</div>
+      <div class="msk-b"><div class="msk-f" style="width:92%"></div></div>
     </div>
     <div class="msk">
-      <div class="msk-t">Работа с первыми лицами</div>
-      <div class="msk-d">VIP-делегации на крупнейших мероприятиях. Лично знаком с Криштиану Роналду.</div>
+      <div class="msk-t">Коммуникационный мост</div>
+      <div class="msk-d">Привык работать с C-Level и сложными стейкхолдерами. Умею переводить с языка бизнеса на язык разработчиков.</div>
       <div class="msk-b"><div class="msk-f" style="width:98%"></div></div>
     </div>
     <div class="msk">
-      <div class="msk-t">Понимание специфики Африки</div>
-      <div class="msk-d">Глубокое знание бизнес-среды Анголы (право, налоги, менталитет).</div>
-      <div class="msk-b"><div class="msk-f" style="width:94%"></div></div>
+      <div class="msk-t">Системное видение процессов</div>
+      <div class="msk-d">Способность синтезировать противоречивые требования и видеть продукт целиком, избегая локальных оптимумов.</div>
+      <div class="msk-b"><div class="msk-f" style="width:90%"></div></div>
     </div>
   </div>
   </section>
 </div>
 
+<!-- ═══ 06 ОБРАЗОВАНИЕ ═══ -->
 <section class="card section fi a5">
 <div class="eduw">
-  <span class="slbl">06 · Образование и сертификации</span>
+  <span class="slbl">06 · Образование (Основа бизнес-понимания)</span>
   <div class="edu-grid">
 
     <div class="ecard ec1">
       <div class="ey-pill ep1">2023–2025</div>
-      <div class="eicon">🎓</div>
+      <div class="eicon">📊</div>
       <div class="etit">Директор по экономике и финансам (CFO)</div>
-      <div class="esub">Eduson Academy · Профессиональная переподготовка</div>
+      <div class="esub">Eduson Academy (Глубокое понимание ROI и бизнес-метрик)</div>
       <div class="estat es1">✓ Завершено</div>
     </div>
 
@@ -598,7 +579,7 @@ body{
       <div class="ey-pill ep2">2014</div>
       <div class="eicon">🎓</div>
       <div class="etit">Московский государственный лингвистический университет</div>
-      <div class="esub">Лингвистика и переводоведение · Диплом специалиста</div>
+      <div class="esub">Лингвистика и переводоведение (База для аналитики сложных текстов)</div>
       <div class="estat es2">✓ Завершено</div>
     </div>
 
@@ -606,7 +587,7 @@ body{
       <div class="ey-pill ep3">2013–2014</div>
       <div class="eicon">🌐</div>
       <div class="etit">Международные коммуникации</div>
-      <div class="esub">Universidade do Minho, Португалия</div>
+      <div class="esub">Universidade do Minho, Португалия (Работа с зарубежными стейкхолдерами)</div>
       <div class="estat es3">✓ Завершено</div>
     </div>
 
@@ -614,10 +595,11 @@ body{
 </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="ft fi a6">
   <div class="fl"></div>
-  <p class="fn">Павел Сайганов · 2026</p>
-  <p class="fs">Международное развитие бизнеса · Управление проектами · Ангола · Бразилия · Португалия</p>
+  <p class="fn">Павел Сайганов · CV 2026</p>
+  <p class="fs">System Analyst · Solution Architecture · Business Context · AI-Assisted Development</p>
 </footer>
 
 </div>
